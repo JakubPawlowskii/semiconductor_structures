@@ -67,7 +67,7 @@ for par_key in parameter_keys:
 
 
 labels = [r'$Al_{x}Ga_{1-x}As$', r'$Al_{x}Ga_{1-x}Sb$', r'$AlAs_{x}Sb_{1-x}$', r'$GaAs_{x}Sb_{1-x}$']
-folder = 'raport/Figures/ternary/'
+folder = 'report/Figures/ternary/'
 ext = '.pdf'
 filenames = ['eg', 'vbo', 'delta_so', 'alc', 'm_e', 'm_hh', 'm_lh']
 xlabel = 'Ułamek molowy x'
@@ -99,7 +99,7 @@ plt.savefig(folder + 'Eg_alc' + ext)
 plt.gca().clear()
 
 xlabel = 'Ułamek molowy '
-folder = 'raport/Figures/quaternary/'
+folder = 'report/Figures/quaternary/'
 filenames = ['quat_eg', 'quat_vbo', 'quat_delta_so', 'quat_alc', 'quat_m_e', 'quat_m_hh', 'quat_m_lh']
 filenames_x = [folder + i + '_x' + ext for i in filenames]
 filenames_y = [folder + i + '_y' + ext for i in filenames]
