@@ -1,0 +1,36 @@
+[0] Config.pm:312> INFO - This is Biber 2.15
+[0] Config.pm:315> INFO - Logfile is 'main.blg'
+[114] biber-MSWIN32:330> INFO - === 
+[137] Biber.pm:415> INFO - Reading 'main.bcf'
+[270] Biber.pm:952> INFO - Found 28 citekeys in bib section 0
+[290] Biber.pm:4334> INFO - Processing section 0
+[305] Biber.pm:4523> INFO - Looking for bibtex format file 'C:/texlive/Bibtex/AlGaAsSb.bib' for section 0
+[313] bibtex.pm:1682> INFO - LaTeX decoding ...
+[403] bibtex.pm:1494> INFO - Found BibTeX data source 'C:/texlive/Bibtex/AlGaAsSb.bib'
+[447] Utils.pm:395> WARN - month field 'nov' in entry 'Wootten2014' is not an integer - this will probably not sort properly.
+[451] Utils.pm:395> WARN - month field 'aug' in entry 'Adachi1985' is not an integer - this will probably not sort properly.
+[460] Utils.pm:395> WARN - month field 'dec' in entry 'Adachi1989' is not an integer - this will probably not sort properly.
+[469] Utils.pm:395> WARN - month field 'apr' in entry 'Seeger1991' is not an integer - this will probably not sort properly.
+[477] Utils.pm:395> WARN - month field 'nov' in entry 'Hall1962' is not an integer - this will probably not sort properly.
+[495] Utils.pm:395> WARN - month field 'feb' in entry 'Dubey2006' is not an integer - this will probably not sort properly.
+[501] Utils.pm:395> WARN - month field 'jun' in entry 'Milnes1993' is not an integer - this will probably not sort properly.
+[506] Utils.pm:395> WARN - month field 'may' in entry 'Dutta1997' is not an integer - this will probably not sort properly.
+[512] Utils.pm:395> WARN - month field 'nov' in entry 'Hildebrand1980' is not an integer - this will probably not sort properly.
+[524] Utils.pm:395> WARN - month field 'dec' in entry 'Bouarissa2009' is not an integer - this will probably not sort properly.
+[533] Utils.pm:395> WARN - month field 'mar' in entry 'Schrottke2016' is not an integer - this will probably not sort properly.
+[542] Utils.pm:395> WARN - month field 'apr' in entry 'Kock1992a' is not an integer - this will probably not sort properly.
+[550] Utils.pm:395> WARN - month field 'mar' in entry 'Aitchison1997' is not an integer - this will probably not sort properly.
+[570] Utils.pm:395> WARN - month field 'mar' in entry 'Yang2006' is not an integer - this will probably not sort properly.
+[582] Utils.pm:395> WARN - month field 'jul' in entry 'Sun2002' is not an integer - this will probably not sort properly.
+[596] Utils.pm:395> WARN - month field 'oct' in entry 'Li2015' is not an integer - this will probably not sort properly.
+[609] Utils.pm:395> WARN - month field 'apr' in entry 'Liu2005' is not an integer - this will probably not sort properly.
+[621] Utils.pm:395> WARN - month field 'apr' in entry 'Mozume2008' is not an integer - this will probably not sort properly.
+[644] Utils.pm:395> WARN - month field 'mar' in entry 'Adachi2009' is not an integer - this will probably not sort properly.
+[645] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\Jakub\AppData\Local\Temp\biber_tmp_ztIm\c74e2636f297951ac860189799e997c1_18876.utf8, line 6, warning: 172 characters of junk seen at toplevel
+[680] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[680] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[681] Biber.pm:4162> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[681] Biber.pm:4168> INFO - No sort tailoring available for locale 'en-US'
+[719] bbl.pm:651> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[759] bbl.pm:754> INFO - Output to main.bbl
+[759] Biber.pm:128> INFO - WARNINGS: 20
