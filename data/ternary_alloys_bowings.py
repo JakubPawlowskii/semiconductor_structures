@@ -45,15 +45,6 @@ AlAsSb = {
 
 
 # Ga As_x Sb_1-x
-def GaAsSb_m_e(x):
-    """
-    This function returns effective mass,
-    not bowing parameter.
-    :param x:
-    :return: effective mass
-    """
-    return 0.039+0.014*x + 0.014*(x**2)
-
 
 GaAsSb = {
     "Eg": 1.43,
