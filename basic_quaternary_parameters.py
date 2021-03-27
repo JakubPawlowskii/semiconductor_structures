@@ -1,5 +1,4 @@
-import binary_materials_parameters as par
-import ternary_alloys_bowings as bow
+from data import ternary_alloys_bowings as bow, binary_materials_parameters as par
 import numpy as np
 import matplotlib.pyplot as plt
 import time
