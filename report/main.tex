@@ -30,7 +30,7 @@
 \usepackage{indentfirst}
 
 % Set page margins
-\usepackage[top=50pt,bottom=60pt,left=78pt,right=78pt]{geometry}
+\usepackage[top=50pt,bottom=60pt,left=70pt,right=70pt]{geometry}
 \usepackage{subcaption}
 % Package used for placeholder text
 \usepackage{booktabs}
@@ -123,6 +123,7 @@
   ]{biblatex}
 \addbibresource{C:/texlive/Bibtex/AlGaAsSb.bib}
 \usepackage{siunitx}
+\usepackage{caption}
 % \addbibresource{ref.bib}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Starts the document
 \begin{document}
@@ -186,6 +187,7 @@
 	{\hypersetup{linkcolor=black}
 		% or \hypersetup{linkcolor=black}, if the colorlinks=true option of hyperref is used
 		\tableofcontents{}
+		\listoffigures{}
 	}
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -384,132 +386,272 @@ krzywe zgodne z wynikami dla stopów trójskładnikowych, przedstawionymi w \hyp
 
 \subsection{Ustalony \(x\), zmienny \(y\)}
 W pierwszej serii wykresów ułamek molowy \(x\) przyjmuje ustalone
-wartości wynoszące \([0.0,\;0.2,\; 0.4,\; 0.6,\; 0.8,\; 1.0]\), a ułamek molowy \(y\)
+wartości wynoszące\\
+ \([0.0,\;0.2,\; 0.4,\; 0.6,\; 0.8,\; 1.0]\), a ułamek molowy \(y\)
 przyjmuje \(1000\) równoodległych wartości między \(0.0\) i \(1.0\).
 
-\begin{itemize}
-	\item \(E_g^{\Gamma}\)(eV) --- rysunek~\ref{fig:quat_Eg_x}
-	\item VBO (eV) --- rysunek~\ref{fig:quat_vbo_x} 
-	\item \(\Delta_{\textrm{SO}}\) --- rysunek~\ref{fig:quat_delta_so_x}
-	\item \(a_{lc}\) (\AA) --- rysunek~\ref{fig:quat_alc_x}
-	\item \(m_e^{\ast}\) --- rysunek~\ref{fig:quat_me_x}
-	\item \(m_{hh}^{\textrm{DOS}}\) --- rysunek~\ref{fig:quat_mhh_x}
-	\item \(m_{lh}^{\textrm{DOS}}\) --- rysunek~\ref{fig:quat_mlh_x}
-\end{itemize}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/quaternary/quat_eg_x.pdf}
-	\caption{Wykres przedstawiający szerokość przerwy wzbronionej w funkcji ułamka 
-	molowego.}\label{fig:quat_Eg_x}
-\end{figure}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/quaternary/quat_eg_x.pdf}\label{fig:quat_Eg_x}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/quaternary/quat_vbo_x.pdf}\label{fig:quat_vbo_x}
+\end{minipage}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/quaternary/quat_vbo_x.pdf}
-	\caption{Wykres przedstawiający wierzchołek pasma walencyjnego w funkcji ułamka 
-	molowego.}\label{fig:quat_vbo_x}
-\end{figure}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/quaternary/quat_delta_so_x.pdf}\label{fig:quat_delta_so_x}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/quaternary/quat_alc_x.pdf}\label{fig:quat_alc_x}
+\end{minipage}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/quaternary/quat_delta_so_x.pdf}
-	\caption{Wykres przedstawiający rozszczepienie spin-orbita w funkcji ułamka 
-	molowego.}\label{fig:quat_delta_so_x}
-\end{figure}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/quaternary/quat_m_hh_x.pdf}\label{fig:quat_mhh_x}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/quaternary/quat_m_lh_x.pdf}\label{fig:quat_mlh_x}
+\end{minipage}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/quaternary/quat_alc_x.pdf}
-	\caption{Wykres przedstawiający parametr sieciowy w funkcji ułamka 
-	molowego.}\label{fig:quat_alc_x}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/quaternary/quat_m_e_x.pdf}
-	\caption{Wykres przedstawiający masę efektywną elektronu w funkcji ułamka 
-	molowego.}\label{fig:quat_me_x}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/quaternary/quat_m_hh_x.pdf}
-	\caption{Wykres przedstawiający masę efektywną ciężkiej dziury w funkcji ułamka 
-	molowego.}\label{fig:quat_mhh_x}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/quaternary/quat_m_lh_x.pdf}
-	\caption{Wykres przedstawiający masę efektywną lekkiej dziury w funkcji ułamka 
-	molowego.}\label{fig:quat_mlh_x}
-\end{figure}
+\begin{center}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/quaternary/quat_m_e_x.pdf}\label{fig:quat_me_x}
+\end{minipage}
+\captionof{figure}{Wykresy parametów stopu czteroskładnikowego dla ustalonego
+ułamka molowego \(x\), w funkcji ułamka molowego \(y\).}
+\end{center}
 
 \subsection{Ustalony \(y\), zmienny \(x\)}
 W drugiej serii wykresów ułamek molowy \(y\) przyjmuje ustalone
-wartości wynoszące \([0.0,\;0.2,\; 0.4,\; 0.6,\; 0.8,\; 1.0]\), a ułamek molowy \(x\)
+wartości wynoszące\\
+\([0.0,\;0.2,\; 0.4,\; 0.6,\; 0.8,\; 1.0]\), a ułamek molowy \(x\)
 przyjmuje \(1000\) równoodległych wartości między \(0.0\) i \(1.0\). 
 
-\begin{itemize}
-	\item \(E_g^{\Gamma}\)(eV) --- rysunek~\ref{fig:quat_Eg_y}
-	\item VBO (eV) --- rysunek~\ref{fig:quat_vbo_y} 
-	\item \(\Delta_{\textrm{SO}}\) --- rysunek~\ref{fig:quat_delta_so_y}
-	\item \(a_{lc}\) (\AA) --- rysunek~\ref{fig:quat_alc_y}
-	\item \(m_e^{\ast}\) --- rysunek~\ref{fig:quat_me_y}
-	\item \(m_{hh}^{\textrm{DOS}}\) --- rysunek~\ref{fig:quat_mhh_y}
-	\item \(m_{lh}^{\textrm{DOS}}\) --- rysunek~\ref{fig:quat_mlh_y}
-\end{itemize}
-\begin{figure}[H]
+
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/quaternary/quat_eg_y.pdf}\label{fig:quat_Eg_y}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/quaternary/quat_vbo_y.pdf}\label{fig:quat_vbo_y}
+\end{minipage}
+
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/quaternary/quat_delta_so_y.pdf}\label{fig:quat_delta_so_y}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/quaternary/quat_alc_y.pdf}\label{fig:quat_alc_y}
+\end{minipage}
+
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/quaternary/quat_m_hh_y.pdf}\label{fig:quat_mhh_y}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/quaternary/quat_m_lh_y.pdf}\label{fig:quat_mlh_y}
+\end{minipage}
+
+\begin{center}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/quaternary/quat_m_e_y.pdf}\label{fig:quat_me_y}
+\end{minipage}
+\captionof{figure}{Wykresy parametów stopu czteroskładnikowego dla ustalonego
+ułamka molowego \(y\), w funkcji ułamka molowego \(x\).}
+\end{center}
+
+
+\section{Odkształcenia przy wzroście epitaksjalnym na podłożu GaAs. Wpływ temperatury.}\label{sec:strain}
+
+W tej sekcji przeanalizujemy wpływ naprężeń na energie pasm w \BPChem{AlGaAsSb}. Naprężenia zostaną wprowadzone
+jako konsekwencja wzrostu epitaksjalnego na podłożu \BPChem{GaAs}. 
+
+\begin{table}[htbp]
 	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/quaternary/quat_eg_y.pdf}
-	\caption{Wykres przedstawiający szerokość przerwy wzbronionej w funkcji ułamka 
-	molowego.}\label{fig:quat_Eg_y}
+\caption{Parametry Varshiego materiałów binarnych. Zależności parametru sieci od temperatury.}
+\begin{tabular}{ccccc}
+	\toprule
+	\toprule
+	Parametr & \BPChem{AlAs} & \BPChem{AlSb} &  \BPChem{GaSb} & \BPChem{GaAs}\\
+	\midrule
+	\(\alpha\) (meV/K)  	& 0.885 & 0.42 & 0.417 & 0.5405  \\
+	\(\beta\) (K)   		& 530   & 140  & 140   & 204     \\
+	\(a_{lc}^T\) (\AA/K)  	& 2.9   & 2.6  & 4.72  & 3.88    \\
+	\bottomrule
+  \bottomrule  
+  \end{tabular}%
+	\label{tab:temp}%
+  \end{table}%
+
+\begin{figure}[H]
+	\includegraphics[width = 0.9\textwidth]{Figures/strain.jpg}
+	\caption{Przekrój poprzeczny przez próbkę. Parametry sieciowe warstwy wzrostowej oraz podłoża oznaczone są odpowiednio
+	\(a_e\) oraz \(a_s\). Źródło:~\citetitle{Adachi2009},~\textcite{Adachi2009}.}\label{fig:strain}
 \end{figure}
 
+W pierwszej kolejności uwzględniony zostanie wpływ temperatury na szerokość w przerwy wzbronionej
+oraz parametru sieci materiałów binarnych. Zależność temperaturowa przerwy wzbronionej opisana jest
+przy pomocy parametrów Varshiego \(\alpha\) i \(\beta\) oraz równania~\autocite{Vurgaftman2001}:
+\begin{equation}
+	E_g(T) = E_g(T=0) - \frac{\alpha \cdot T^2}{T + \beta}\label{eq:varshi}
+\end{equation}
+Zależność temperaturowa parametru sieci dana jest równaniem:
+\begin{equation}
+	a_{lc}(T) = a_{lc}(T = 0) + a_{lc}^T \cdot 10^{-5}\cdot(T - 300)
+\end{equation}
+Parametry Varshiego materiałów binarnych, oraz zależności parametru sieci od temperatury przedstawione są w tabeli~\ref{tab:temp}:
+
+
+W celu wyznaczenia temperaturowej zależności parametrów dla stopów trójskładnikowych i czteroskładnikowego,
+posłużono się schematem interpolacyjnym opisanym w~\ref{sec:interpolation}.
+  
+
+\begin{table}[htbp]
+	\centering
+\caption{Potencjały deformacyjne oraz parametry sztywności materiałów binarnych~\autocite{Vurgaftman2001}.}
+\begin{tabular}{ccccc}
+	\toprule
+	\toprule
+	Parametr & \BPChem{AlAs} & \BPChem{AlSb} &  \BPChem{GaSb} & \BPChem{GaAs}\\
+	\midrule
+	\(a_{c}\)   (eV)  	& -5.64 & -4.5   & -7.5   & -7.17 \\
+	\(a_{v}\)   (eV)   	& -2.47 & -1.4   & -0.8   & -1.16 \\
+	\(b\)      (eV)  	& -2.3  & -1.35  & -2.0   & -2.0  \\
+	\(C_{11}\) (GPa)  	&  1250 &  876.9 &  884.2 &  1221 \\
+	\(C_{12}\) (GPa)  	&  534  &  434.1 &  402.6 &  566  \\
+\bottomrule
+  \bottomrule  
+  \end{tabular}%
+	\label{tab:strain_params}%
+  \end{table}%
+
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/strain/ter_alc1.pdf}\label{fig:ter_alc1}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/strain/ter_eg1.pdf}\label{fig:ter_eg1}
+\end{minipage}
+
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/strain/ter_alc2.pdf}\label{fig:ter_alc1}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/strain/ter_eg2.pdf}\label{fig:ter_eg2}
+\end{minipage}
+\begin{center}
+\captionof{figure}{Zależności interpolowanej przerwy wzbronionej i parametru sieci dla stopów 
+trójskładnikowych, i wybranych ułamków molowych \(x\).}
+\end{center}
+
+Znając zależność temperaturową stopu czteroskładnikowego oraz podłoża policzono
+naprężenia występujące w próbce. Potrzebne potencjały deformacyjne oraz parametry sztywności
+zostały wyznaczone przy pomocy standardowego schematu interpolacyjnego dla stopu czteroskładnikowego.
+Ze względu na brak dostępności parametrów nieliniowości ograniczono się do interpolacji liniowej.
+
+  
+Do obliczenia wpływu naprężeń posłużono się następującymi wzorami:
+\begin{align*}
+	&\varepsilon_{\parallel } \equiv \varepsilon_{xx} = \varepsilon_{yy} = \frac{a_{GaAs} - a_{AlGaAsSb}}{a_{AlGaAsSb}}\\
+	&\varepsilon_{\perp } \equiv \varepsilon_{zz} = -2\frac{C_{12}}{C_{11}}\varepsilon_{\parallel}\\
+	&\delta E_{c,hydro} = a_c\left(\varepsilon_{\perp} + 2\varepsilon_{\parallel}\right)\\
+	&\delta E_{v,hydro} = a_v\left(\varepsilon_{\perp} + 2\varepsilon_{\parallel}\right)\\
+	&\delta E_{v,biax} = b\left(\varepsilon_{\perp} - \varepsilon_{\parallel}\right)\\
+	&\delta E_{v,biax}^{\pm} = \frac{1}{2}\left(\delta E_{v,biax} - \Delta_{SO} \pm \sqrt{9\delta E_{v,biax}^2 + 2\delta E_{v,biax} \Delta_{SO} + \Delta_{SO}^2 }\right)\\
+\end{align*}
+W przypadku braku indeksu górnego lub dolnego, przyjmujemy że stałe są obliczone
+dla stopu czteroskładnikowego. Przyjmujemy, że nasz materiał ma wzór stechiometryczny
+\BPChem{Al\_{x}Ga\_{1-x}As\_{y}Sb\_{1-y}}.
+
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = 0.9\linewidth]{Figures/strain/alc1.pdf}\label{fig:alc1}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = 0.9\linewidth]{Figures/strain/eg1.pdf}\label{fig:eg1}
+\end{minipage}
+
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = 0.9\linewidth]{Figures/strain/eps_orth1.pdf}\label{fig:eps_orth1}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = 0.9\linewidth]{Figures/strain/eps_par1.pdf}\label{fig:eps_par1}
+\end{minipage}
+\begin{center}
+\captionof{figure}{Zależności interpolowanej przerwy wzbronionej i parametru sieci dla stopu czteroskładnikowego
+od temperatury. Odkształcenia prostopadłe oraz planarne w funkcji temperatury.}\label{fig:grp1}
+\end{center}
+
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = 0.9\linewidth]{Figures/strain/alc2.pdf}\label{fig:alc2}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = 0.9\linewidth]{Figures/strain/eg2.pdf}\label{fig:eg2}
+\end{minipage}
+
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = 0.9\linewidth]{Figures/strain/eps_orth2.pdf}\label{fig:eps_orth2}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = 0.9\linewidth]{Figures/strain/eps_par2.pdf}\label{fig:eps_par2}
+\end{minipage}
+\begin{center}
+\captionof{figure}{To samo co na rysunku~\ref{fig:grp1}, ale dla innych ustalonych ułamków molowych \(x\) i \(y\).}
+\end{center}
+
+Powyższe obliczenia pozwoliły na uzyskanie energii pasm w funkcji temperatury, z uwzględnieniem jej
+wpływu na Odkształcenia. Policzono odpowiednio: energię pasma przewodnictwa, energię pasma walencyjnego
+dziur ciężkich, energię pasma walencyjnego dziur lekkich oraz energię pasma walencyjnego rozszczepionego
+poprzez oddziaływanie spin-orbitalne. Wszystkie energie liczone są w punkcie \(\Gamma\)
+strefy Brillouina, czyli w poniższych sumach nie pojawia się wkład związany z energią kinetyczną.
+
+\begin{align*}
+	E_c &= \textrm{VBO} + E_g + \delta E_{c,hydro}\\
+	E_{v,hh} &= \textrm{VBO} + \delta E_{v,hydro} - \delta E_{v,biax}\\
+	E_{v,lh} &= \textrm{VBO} + \delta E_{v,hydro} + \delta E_{v,biax}^{+}\\
+	E_{v,sh} &= \textrm{VBO} + \delta E_{v,hydro} + \delta E_{v,biax}^{-}\\
+\end{align*}
+
+Poniżej przedstawiono rezultaty obliczeń w funkcji temperatury, dla wybranych wartości ułamków molowych \(x\) oraz \(y\).
+
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/strain/Ec1.pdf}\label{fig:Ec1}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/strain/Ev_hh1.pdf}\label{fig:Ev_hh1}
+\end{minipage}
+
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/strain/Ev_lh1.pdf}\label{fig:Ev_lh1}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/strain/Ev_sh1.pdf}\label{fig:Ev_sh1}
+\end{minipage}
+\begin{center}
+\captionof{figure}{Zależności energii czterech badanych pasm od temperatury.}\label{fig:bands1}
+\end{center}
+
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/strain/Ec2.pdf}\label{fig:Ec2}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/strain/Ev_hh2.pdf}\label{fig:Ev_hh2}
+\end{minipage}
+
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/strain/Ev_lh2.pdf}\label{fig:Ev_lh2}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/strain/Ev_sh2.pdf}\label{fig:Ev_sh2}
+\end{minipage}
+\begin{center}
+\captionof{figure}{To samo co rysunek~\ref{fig:bands1}, tylko dla innych wartości ułamków molowych.}\label{fig:bands2}
+\end{center}
+
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/quaternary/quat_vbo_y.pdf}
-	\caption{Wykres przedstawiający wierzchołek pasma walencyjnego w funkcji ułamka 
-	molowego.}\label{fig:quat_vbo_y}
+	\includegraphics[width = 0.75\textwidth]{Figures/strain/one.pdf}
+	\caption{Rysnek przedstawiający energie wszystkich pasm razem, dla materiału 
+	\BPChem{Al\_{0.4}Ga\_{0.6}As\_{0.4}Sb\_{0.6}}. Widać, że w rozpatrywanej sytuacji temperatura
+	ma największy wpływ na położenie pasma przewodnictwa. Pozostałe pasma w dobrym przybliżeniu nie zmieniają się
+	z temperaturą.}
+	\label{fig:allE}
 \end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/quaternary/quat_delta_so_y.pdf}
-	\caption{Wykres przedstawiający rozszczepienie spin-orbita w funkcji ułamka 
-	molowego.}\label{fig:quat_delta_so_y}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/quaternary/quat_alc_y.pdf}
-	\caption{Wykres przedstawiający parametr sieciowy w funkcji ułamka 
-	molowego.}\label{fig:quat_alc_y}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/quaternary/quat_m_e_y.pdf}
-	\caption{Wykres przedstawiający masę efektywną elektronu w funkcji ułamka 
-	molowego.}\label{fig:quat_me_y}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/quaternary/quat_m_hh_y.pdf}
-	\caption{Wykres przedstawiający masę efektywną ciężkiej dziury w funkcji ułamka 
-	molowego.}\label{fig:quat_mhh_y}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/quaternary/quat_m_lh_y.pdf}
-	\caption{Wykres przedstawiający masę efektywną lekkiej dziury w funkcji ułamka 
-	molowego.}\label{fig:quat_mlh_y}
-\end{figure}
-
-
 
 \chapter{Wyniki i dyskusja}\label{chapt:results}
 
@@ -517,66 +659,35 @@ przyjmuje \(1000\) równoodległych wartości między \(0.0\) i \(1.0\).
 \chapter*{Dodatek: Wykresy parametrów materiałów trójskładnikowych}\label{chapt:dodatek}
 \addcontentsline{toc}{chapter}{Dodatek: Wykresy parametrów materiałów trójskładnikowych}
 Poniżej zostały przestawione wykresy interesujących nas parametrów:
-\begin{itemize}
-	\item \(E_g^{\Gamma}\)(eV) --- rysunek~\ref{fig:ter_Eg}
-	\item VBO (eV) --- rysunek~\ref{fig:ter_vbo} 
-	\item \(\Delta_{\textrm{SO}}\) --- rysunek~\ref{fig:ter_delta_so}
-	\item \(a_{lc}\) (\AA) --- rysunek~\ref{fig:ter_alc}
-	\item \(m_e^{\ast}\) --- rysunek~\ref{fig:ter_me}
-	\item \(m_{hh}^{\textrm{DOS}}\) --- rysunek~\ref{fig:ter_mhh}
-	\item \(m_{lh}^{\textrm{DOS}}\) --- rysunek~\ref{fig:ter_mlh}
-\end{itemize}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/ternary/eg.pdf}
-	\caption{Wykres przedstawiający szerokość przerwy wzbronionej w funkcji ułamka 
-	molowego.}\label{fig:ter_Eg}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/ternary/vbo.pdf}
-	\caption{Wykres przedstawiający wierzchołek pasma walencyjnego w funkcji ułamka 
-	molowego.}\label{fig:ter_vbo}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/ternary/delta_so.pdf}
-	\caption{Wykres przedstawiający rozszczepienie spin-orbita w funkcji ułamka 
-	molowego.}\label{fig:ter_delta_so}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/ternary/alc.pdf}
-	\caption{Wykres przedstawiający parametr sieciowy w funkcji ułamka 
-	molowego.}\label{fig:ter_alc}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/ternary/m_e.pdf}
-	\caption{Wykres przedstawiający masę efektywną elektronu w funkcji ułamka 
-	molowego.}\label{fig:ter_me}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/ternary/m_hh.pdf}
-	\caption{Wykres przedstawiający masę efektywną ciężkiej dziury w funkcji ułamka 
-	molowego.}\label{fig:ter_mhh}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.9\linewidth]{Figures/ternary/m_lh.pdf}
-	\caption{Wykres przedstawiający masę efektywną lekkiej dziury w funkcji ułamka 
-	molowego.}\label{fig:ter_mlh}
-\end{figure}
 
 
-	
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/ternary/eg.pdf}\label{fig:ter_Eg}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/ternary/vbo.pdf}\label{fig:ter_vbo}
+\end{minipage}
+
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/ternary/delta_so.pdf}\label{fig:ter_delta_so}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/ternary/alc.pdf}\label{fig:ter_alc}
+\end{minipage}
+
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/ternary/m_e.pdf}\label{fig:ter_me}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/ternary/m_hh.pdf}\label{fig:ter_mhh}
+\end{minipage}
+
+\begin{center}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/ternary/m_lh.pdf}\label{fig:ter_mlh}
+\end{minipage}
+\captionof{figure}{Wykresy parametrów stopów trójskładnikowych w funkcji ułamka molowego \(x\).}
+\end{center}
 
 	
 	% Adding a bibliography if citations are used in the report

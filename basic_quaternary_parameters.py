@@ -65,7 +65,9 @@ for par_key in parameter_keys:
             y * (1 - y) * (var * p_AlAsSb + (1 - var) * p_GaAsSb)
         quaternary_params["fix_y"]['{0:1.1f}'.format(y)][par_key] = p / (var * (1 - var) + y * (1 - y))
 
-
+fontsize = 18
+tick_fontsize = 14
+legend_fontsize = 12
 labels = [r'$Al_{x}Ga_{1-x}As$', r'$Al_{x}Ga_{1-x}Sb$', r'$AlAs_{x}Sb_{1-x}$', r'$GaAs_{x}Sb_{1-x}$']
 folder = 'report/Figures/ternary/'
 ext = '.pdf'
@@ -82,9 +84,12 @@ filenames = [folder + i + ext for i in filenames]
 for i, param_key in enumerate(parameter_keys):
     for j, mat in enumerate(ternary_mat):
         plt.plot(var, ternary_params[mat][param_key], label=labels[j])
-    plt.legend(loc='best')
-    plt.gca().set_xlabel(xlabel)
-    plt.gca().set_ylabel(ylabels[i])
+    if param_key == "Eg":
+        plt.legend(loc='best', fontsize=legend_fontsize + 2)
+    plt.gca().set_xlabel(xlabel, fontsize=fontsize)
+    plt.gca().set_ylabel(ylabels[i], fontsize=fontsize)
+    plt.yticks(fontsize=tick_fontsize)
+    plt.xticks(fontsize=tick_fontsize)
     plt.tight_layout()
     plt.xlim([0, 1])
     plt.savefig(filenames[i])
@@ -92,9 +97,11 @@ for i, param_key in enumerate(parameter_keys):
 
 for j, mat in enumerate(ternary_mat):
     plt.plot(ternary_params[mat]["alc"], ternary_params[mat]["Eg"], label=labels[j])
-plt.legend(loc='best')
-plt.gca().set_xlabel(ylabels[-1])
-plt.gca().set_ylabel(ylabels[0])
+plt.legend(loc='best', fontsize=legend_fontsize)
+plt.gca().set_xlabel(ylabels[-1], fontsize=fontsize-2)
+plt.gca().set_ylabel(ylabels[0], fontsize=fontsize-2)
+plt.yticks(fontsize=tick_fontsize-2)
+plt.xticks(fontsize=tick_fontsize-2)
 plt.savefig(folder + 'Eg_alc' + ext)
 plt.gca().clear()
 
@@ -115,9 +122,12 @@ for i, par_key in enumerate(parameter_keys):
         else:
             label = r'$Al_{' + '%.1f' % fix_val + r'}Ga_{' + '%.1f' % (1 - fix_val) + '}As_{y}Sb_{1-y}$'
         plt.plot(var, quaternary_params["fix_x"]['{0:1.1f}'.format(fix_val)][par_key], label=label)
-    plt.gca().set_ylabel(ylabels[i])
-    plt.gca().set_xlabel(xlabel + 'y')
-    plt.legend(loc='best', fontsize=9)
+    plt.gca().set_ylabel(ylabels[i], fontsize=fontsize)
+    plt.gca().set_xlabel(xlabel + 'y', fontsize=fontsize)
+    if par_key == "VBO":
+        plt.legend(loc='best', fontsize=legend_fontsize + 2)
+    plt.yticks(fontsize=tick_fontsize)
+    plt.xticks(fontsize=tick_fontsize)
     plt.tight_layout()
     plt.xlim([0.0, 1.0])
     plt.savefig(filenames_fix["fix_x"][i])
@@ -132,9 +142,12 @@ for i, par_key in enumerate(parameter_keys):
         else:
             label = r'$Al_{' + '%.1f' % fix_val + r'}Ga_{' + '%.1f' % (1 - fix_val) + '}As_{x}Sb_{1-x}$'
         plt.plot(var, quaternary_params["fix_y"]['{0:1.1f}'.format(fix_val)][par_key], label=label)
-    plt.gca().set_ylabel(ylabels[i])
-    plt.gca().set_xlabel(xlabel + 'x')
-    plt.legend(loc='best', fontsize=9)
+    plt.gca().set_ylabel(ylabels[i], fontsize=fontsize)
+    plt.gca().set_xlabel(xlabel + 'x', fontsize=fontsize)
+    if par_key == "Eg":
+        plt.legend(loc='best', fontsize=legend_fontsize + 2)
+    plt.yticks(fontsize=tick_fontsize)
+    plt.xticks(fontsize=tick_fontsize)
     plt.tight_layout()
     plt.xlim([0.0, 1.0])
     plt.savefig(filenames_fix["fix_y"][i])
