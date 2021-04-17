@@ -264,7 +264,7 @@ w temperaturze pokojowej, a więc pracujących w zakresie bliskiej podczerwieni~
 \BPChem{GaAs\_{1-x}Sb\_{x}} jest materiałem półprzewodnikowym grupy III-V. Stosowany jest głównie jako
 fotodetektor pracujący w bliskiej podczerwieni~\autocite{Sun2002,Li2015}. Innym interesującą aplikacją
 tego materiału jest zwiększenie długości fali emitowanej z kropki kwantowej \BPChem{InAs/GaAs}, poprzez
-naniesienie jego cienkiej warstwy zmniejszającej naprężenia w kropce~\autocite{Liu2005}.
+naniesienie jego cienkiej warstwy zmniejszającej odkształcenia w kropce~\autocite{Liu2005}.
 
 
 
@@ -275,7 +275,7 @@ Parametry nieliniowości stopów trójskładnikowych mogą zostać znalezione w 
 % \section{test}
 	
 
-\chapter{Opis modeli i metod}\label{chapt:methods}
+\chapter{Opis modeli i metod. Własności stopu czteroskładnikowego.}\label{chapt:methods}
 \section{Schemat interpolacyjny}\label{sec:interpolation}
 W celu znalezienia parametrów stopów trójskładnikowych znając parametry materiałów binarnych
 	możemy posłużyć się dobrze znanym schematem interpolacyjnym~\autocite{Adachi1985}. W najprostszym, liniowym
@@ -459,7 +459,7 @@ ułamka molowego \(y\), w funkcji ułamka molowego \(x\).}
 
 \section{Odkształcenia przy wzroście epitaksjalnym na podłożu GaAs. Wpływ temperatury.}\label{sec:strain}
 
-W tej sekcji przeanalizujemy wpływ naprężeń na energie pasm w \BPChem{AlGaAsSb}. Naprężenia zostaną wprowadzone
+W tej sekcji przeanalizujemy wpływ naprężeń na energie pasm w \BPChem{AlGaAsSb}. odkształcenia zostaną wprowadzone
 jako konsekwencja wzrostu epitaksjalnego na podłożu \BPChem{GaAs}. 
 
 \begin{table}[htbp]
@@ -480,7 +480,8 @@ jako konsekwencja wzrostu epitaksjalnego na podłożu \BPChem{GaAs}.
   \end{table}%
 
 \begin{figure}[H]
-	\includegraphics[width = 0.9\textwidth]{Figures/strain.jpg}
+	\centering
+	\includegraphics[width = 0.7\textwidth]{Figures/strain.jpg}
 	\caption{Przekrój poprzeczny przez próbkę. Parametry sieciowe warstwy wzrostowej oraz podłoża oznaczone są odpowiednio
 	\(a_e\) oraz \(a_s\). Źródło:~\citetitle{Adachi2009},~\textcite{Adachi2009}.}\label{fig:strain}
 \end{figure}
@@ -540,7 +541,7 @@ trójskładnikowych, i wybranych ułamków molowych \(x\).}
 \end{center}
 
 Znając zależność temperaturową stopu czteroskładnikowego oraz podłoża policzono
-naprężenia występujące w próbce. Potrzebne potencjały deformacyjne oraz parametry sztywności
+odkształcenia występujące w próbce. Potrzebne potencjały deformacyjne oraz parametry sztywności
 zostały wyznaczone przy pomocy standardowego schematu interpolacyjnego dla stopu czteroskładnikowego.
 Ze względu na brak dostępności parametrów nieliniowości ograniczono się do interpolacji liniowej.
 
@@ -652,6 +653,54 @@ Poniżej przedstawiono rezultaty obliczeń w funkcji temperatury, dla wybranych 
 	z temperaturą.}
 	\label{fig:allE}
 \end{figure}
+
+\section{Profile energetyczne cienkich warstw.\label{sec:thin_layer}}
+
+W tej sekcji przedstawimy profile energetyczne cienkich warstw typu A/B/A,
+gdzie materiał A to \BPChem{GaAs} a materiał B to nas stop czteroskładnikowy czyli
+\BPChem{Al\_{x}Ga\_{1-x}As\_{y}Sb\_{1-y}}. Grubość całej warstwy wynosi \(500\)nm, a grubość
+materiału czteroskładnikowego to \(50\)nm. Znajduje się on dokładnie w środku warstwy tj.
+pomiędzy \(225\) a \(275\) nm.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width = 1\linewidth]{Figures/structure/strain_no_strain.pdf}
+	\caption{Porównanie profili energetycznych badanej struktury bez uwzględnienia
+	naprężeń oraz z odkształceniami. Przyjęto temperaturę \(T = 300\;[K]\).
+	Składy materiału B: \\(a) \BPChem{Al\_{0.1}Ga\_{0.9}As\_{0.5}Sb\_{0.5}},
+	(b) \BPChem{GaAs\_{0.9}Sb\_{0.1}}, (c) \BPChem{Al\_{0.2}Ga\_{0.8}As\_{0.9}Sb\_{0.1}},
+	(d) \BPChem{Al\_{0.5}Ga\_{0.5}As\_{0.9}Sb\_{0.1}}}\label{fig:strain_no_strain}
+\end{figure}
+
+Na Rysunku~\ref{fig:strain_no_strain} przedstawiono wpływ odkształceń na profil energetyczny
+badanej cienkiej warstwy w temperaturze \(T = 300[K]\). Uwzględnienie odkształceń prowadzi do podniesienia się pasma przewodnictwa,
+oraz do rozszczepienia pasma walencyjnego na pasmo ciężkodziurowe, lekkodziurowe i rozszczepione
+spin-orbitalnie. Są to wyniki zgodne z otrzymanymi w sekcji~\ref{sec:strain}.
+Obserwujemy różne typy nieciągłości pasm np. Typ I na panelu (d)
+oraz oraz Typ III na panelu (a) i (b). Typy mogą zależeć od tego, które z rozszczepionych
+pasm walencyjnych weźmiemy pod uwagę. Widać również zależność typu nieciągłości
+od składu.
+
+Na Rysunku~\ref{fig:strain_temp} znajdują się profile energetyczne z odkształceniami, dla
+różnych wartości temperatury. Jedyna widoczna zależność temperaturowa występuje
+dla energii pasma przewodnictwa \(E_c\), która maleje wraz ze wzrostem
+temperatury (por. Rysunek~\ref{fig:bands2} oraz Rysunek~\ref{fig:allE}). Pozostałe
+pasma bardzo słabo zależą od temperatury i nie jest to widoczne w profilu energetycznym
+struktury.
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = 1\linewidth]{Figures/structure/temp_strain.pdf}
+	\caption{Porównanie profili energetycznych badanej struktury ze względu na
+	temperaturę. odkształcenia zostały uwzględnione.
+	Składy materiału B: \\(a) \BPChem{Al\_{0.1}Ga\_{0.9}As\_{0.5}Sb\_{0.5}},
+	(b) \BPChem{GaAs\_{0.9}Sb\_{0.1}}, (c) \BPChem{Al\_{0.2}Ga\_{0.8}As\_{0.9}Sb\_{0.1}},
+	(d) \BPChem{Al\_{0.5}Ga\_{0.5}As\_{0.9}Sb\_{0.1}}}\label{fig:strain_temp}
+\end{figure}
+
+
+
 
 \chapter{Wyniki i dyskusja}\label{chapt:results}
 
