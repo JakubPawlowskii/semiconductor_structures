@@ -1,3 +1,5 @@
+from sys import argv
+
 from data import ternary_alloys_bowings as bow, binary_materials_parameters as par
 import numpy as np
 import matplotlib.pyplot as plt
@@ -6,13 +8,19 @@ import copy
 from matplotlib import cm
 import matplotlib.patches as mpatches
 import matplotlib.lines as mlines
+from matplotlib.gridspec import GridSpec
+from brokenaxes import brokenaxes
+import sys
 
 start = time.time()
 
 # --------------------- SETTINGS ------------------------------------
 temperature = np.array([0, 150, 300, 450])
-var = np.array([0.9])
-fixed = np.array([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
+var = np.array([0.5, 0.9])
+fixed = np.array([0.0, 0.1, 0.2, 0.5])
+# var = np.array([float(sys.argv[1])])
+# fixed = np.array([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
+titles = ['x = 0.1 y = 0.5', 'x = 0.0 y = 0.9', 'x = 0.2 y = 0.9', 'x = 0.5 y = 0.9']
 boundary_AB = 225.0
 boundary_BA = 275.0
 xx = np.arange(0, 500, 0.1)
@@ -22,13 +30,13 @@ leg_no_T = [r'$E_c$', r'$E_{v,hh}$', r'$E_{v,lh}$', r'$E_{v,sh}$']
 cmap = cm.get_cmap('viridis', 4)
 colors = cmap(np.linspace(0, 1, 4))
 linestyles = ['solid', 'dotted', 'dashed', 'dashdot']
-linewidth = 1
-fontsize = 13
-tick_fontsize = 17
+linewidth = 0.8
+fontsize = 11
+tick_fontsize = 15
 legend_fontsize = 10
 
-folder = 'plots/structure/'
-ext = '.png'
+folder = 'report/Figures/structure/'
+ext = '.pdf'
 # -------------------------------------------------------------------
 
 ternary_mat = ["AlGaAs", "AlGaSb", "AlAsSb", "GaAsSb"]
@@ -102,18 +110,22 @@ deformation_params = []
 #
 energies_keys = ["Ec", "Ev_hh", "Ev_lh", "Ev_sh"]
 energies = []
+energies_no_strain = []
 # GaAs is our substrate
 for i, T in enumerate(temperature):
     deformation_params.append(dict())
     deformation_params[i] = {"fix_x": dict(), "fix_y": dict()}
     energies.append(dict())
+    energies_no_strain.append(dict())
     energies[i] = {"fix_x": dict(), "fix_y": dict()}
+    energies_no_strain[i] = {"fix_x": dict(), "fix_y": dict()}
 
     for fix_arg in ["fix_x", "fix_y"]:
         for j, fix in enumerate(fixed):
             fix_key = '{0:1.1f}'.format(fix)
             deformation_params[i][fix_arg][fix_key] = dict()
             energies[i][fix_arg][fix_key] = dict()
+            energies_no_strain[i][fix_arg][fix_key] = dict()
 
             deformation_params[i][fix_arg][fix_key]["eps_par"] = \
                 (par.GaAs["alc_temp"](T) - quaternary_params_with_temperature[i][fix_arg][fix_key]["alc_temp"]) / \
@@ -150,76 +162,150 @@ for i, T in enumerate(temperature):
             energies[i][fix_arg][fix_key]["Ec"] = quaternary_params_with_temperature[i][fix_arg][fix_key]["VBO"] + \
                                                   quaternary_params_with_temperature[i][fix_arg][fix_key]["Eg"] + \
                                                   deformation_params[i][fix_arg][fix_key]["dEc_hydro"]
+            energies_no_strain[i][fix_arg][fix_key]["Ec"] = quaternary_params_with_temperature[i][fix_arg][fix_key]["VBO"] + \
+                                                  quaternary_params_with_temperature[i][fix_arg][fix_key]["Eg"]
+
             energies[i][fix_arg][fix_key]["Ev_hh"] = quaternary_params_with_temperature[i][fix_arg][fix_key]["VBO"] + \
                                                      deformation_params[i][fix_arg][fix_key]["dEv_hydro"] - \
                                                      deformation_params[i][fix_arg][fix_key]["dEv_biax"]
+            energies_no_strain[i][fix_arg][fix_key]["Ev_hh"] = quaternary_params_with_temperature[i][fix_arg][fix_key]["VBO"]
+
             energies[i][fix_arg][fix_key]["Ev_lh"] = quaternary_params_with_temperature[i][fix_arg][fix_key]["VBO"] + \
                                                      deformation_params[i][fix_arg][fix_key]["dEv_hydro"] + \
                                                      deformation_params[i][fix_arg][fix_key]["dEv_biax_plus"]
+            energies_no_strain[i][fix_arg][fix_key]["Ev_lh"] = quaternary_params_with_temperature[i][fix_arg][fix_key]["VBO"]
+
             energies[i][fix_arg][fix_key]["Ev_sh"] = quaternary_params_with_temperature[i][fix_arg][fix_key]["VBO"] + \
                                                      deformation_params[i][fix_arg][fix_key]["dEv_hydro"] + \
                                                      deformation_params[i][fix_arg][fix_key]["dEv_biax_minus"]
+            energies_no_strain[i][fix_arg][fix_key]["Ev_sh"] = quaternary_params_with_temperature[i][fix_arg][fix_key]["VBO"]
 
 Ec = np.zeros((len(temperature), len(xx)))
 Ev_hh = np.zeros((len(temperature), len(xx)))
 Ev_lh = np.zeros((len(temperature), len(xx)))
 Ev_sh = np.zeros((len(temperature), len(xx)))
+Ec_ns = np.zeros((len(temperature), len(xx)))
+Ev_hh_ns = np.zeros((len(temperature), len(xx)))
+Ev_lh_ns = np.zeros((len(temperature), len(xx)))
+Ev_sh_ns = np.zeros((len(temperature), len(xx)))
 
-Eg_GaAs = par.GaAs["Eg"]
 VBO_GaAS = par.GaAs["VBO"]
 
-for fix_arg in ["fix_x", "fix_y"]:
-    for j, fix in enumerate(fixed):
-        fix_key = '{0:1.1f}'.format(fix)
+fig = plt.figure()
+sps = GridSpec(nrows=2, ncols=2, hspace=0.2, wspace=0.25)
+spss = [sps[0, 0], sps[0, 1], sps[1, 0], sps[1, 1]]
+spsi = 0
+filename = ''
+baxes = []
+ylims = [((-1.0, 0.1), (0.4, 1.2)), ((-1.0, -0.55), (0.5, 0.85)),
+         ((-1.3, -0.7), (0.45, 1.0)), ((-1.5, -0.4), (0.4, 1.3))]
+textt = ['(a)', '(b)', '(c)', '(d)']
+textx = 50
+texty = [1.0, 0.8, 0.9, 1.0]
+for var_i in range(2):
+    for fix_arg in ["fix_x", "fix_y"]:
+        for j, fix in enumerate(fixed):
+            fix_key = '{0:1.1f}'.format(fix)
+            # textt = ''
+            if fix_arg == 'fix_x':
+                # textt = r'$Al_{' + '%.1f' % var[var_i] + r'}Ga_{' + '%.1f' % (
+                #         1 - var[var_i]) + '}As_{' + '%.1f' % fix + '}Sb_{' + '%.1f' % (1 - fix) + '}$'
+                title = 'x = ' + str(fix) + ' y = ' + str(var[var_i])
+            else:
+                # textt = r'$Al_{' + '%.1f' % fix + r'}Ga_{' + '%.1f' % (
+                #         1 - fix) + '}As_{' + '%.1f' % var[var_i] + '}Sb_{' + '%.1f' % (1 - var[var_i]) + '}$'
+                title = 'x = ' + str(var[var_i]) + ' y = ' + str(fix)
+            if title not in titles:
+                continue
 
-        for k, T in enumerate(temperature):
-            Ec_quat = energies[k][fix_arg][fix_key]["Ec"][0]
-            Ev_hh_quat = energies[k][fix_arg][fix_key]["Ev_hh"][0]
-            Ev_lh_quat = energies[k][fix_arg][fix_key]["Ev_lh"][0]
-            Ev_sh_quat = energies[k][fix_arg][fix_key]["Ev_sh"][0]
-            for i, x in enumerate(xx):
-                if x < boundary_AB or x > boundary_BA:  # in GaAs
-                    Ec[k, i] = Eg_GaAs + VBO_GaAS
-                    Ev_hh[k, i] = VBO_GaAS
-                    Ev_lh[k, i] = VBO_GaAS
-                    Ev_sh[k, i] = VBO_GaAS
-                elif boundary_AB < x < boundary_BA:
-                    Ec[k, i] = Ec_quat
-                    Ev_hh[k, i] = Ev_hh_quat
-                    Ev_lh[k, i] = Ev_lh_quat
-                    Ev_sh[k, i] = Ev_sh_quat
-                elif x == boundary_AB or x == boundary_BA:
-                    Ec[k, i] = (Ec_quat + Eg_GaAs + VBO_GaAS) / 2
-                    Ev_hh[k, i] = (Ev_hh_quat + VBO_GaAS) / 2
-                    Ev_lh[k, i] = (Ev_lh_quat + VBO_GaAS) / 2
-                    Ev_sh[k, i] = (Ev_sh_quat + VBO_GaAS) / 2
-                else:
-                    print("Error")
+            for k, T in enumerate(temperature):
+                Eg_GaAs = par.GaAs["Eg"] - (par.GaAs["alpha"] * (T ** 2) / (T + par.GaAs["beta"]))
+                Ec_quat = energies[k][fix_arg][fix_key]["Ec"][var_i]
+                Ev_hh_quat = energies[k][fix_arg][fix_key]["Ev_hh"][var_i]
+                Ev_lh_quat = energies[k][fix_arg][fix_key]["Ev_lh"][var_i]
+                Ev_sh_quat = energies[k][fix_arg][fix_key]["Ev_sh"][var_i]
 
-        for k in range(len(temperature)):
-            plt.plot(xx, Ec[k, :], color=colors[0], linestyle=linestyles[k], linewidth=linewidth)
-            plt.plot(xx, Ev_hh[k, :], color=colors[1], linestyle=linestyles[k], linewidth=linewidth)
-            plt.plot(xx, Ev_lh[k, :], color=colors[2], linestyle=linestyles[k], linewidth=linewidth)
-            plt.plot(xx, Ev_sh[k, :], color=colors[3], linestyle=linestyles[k], linewidth=linewidth)
+                Ec_quat_ns = energies_no_strain[k][fix_arg][fix_key]["Ec"][var_i]
+                Ev_hh_quat_ns = energies_no_strain[k][fix_arg][fix_key]["Ev_hh"][var_i]
+                Ev_lh_quat_ns = energies_no_strain[k][fix_arg][fix_key]["Ev_lh"][var_i]
+                Ev_sh_quat_ns = energies_no_strain[k][fix_arg][fix_key]["Ev_sh"][var_i]
+                for i, x in enumerate(xx):
+                    if x < boundary_AB or x > boundary_BA:  # in GaAs
+                        Ec[k, i] = Eg_GaAs + VBO_GaAS
+                        Ev_hh[k, i] = VBO_GaAS
+                        Ev_lh[k, i] = VBO_GaAS
+                        Ev_sh[k, i] = VBO_GaAS
+                        Ec_ns[k, i] = Eg_GaAs + VBO_GaAS
+                        Ev_hh_ns[k, i] = VBO_GaAS
+                        Ev_lh_ns[k, i] = VBO_GaAS
+                        Ev_sh_ns[k, i] = VBO_GaAS
+                    elif boundary_AB < x < boundary_BA:
+                        Ec[k, i] = Ec_quat
+                        Ev_hh[k, i] = Ev_hh_quat
+                        Ev_lh[k, i] = Ev_lh_quat
+                        Ev_sh[k, i] = Ev_sh_quat
+                        Ec_ns[k, i] = Ec_quat_ns
+                        Ev_hh_ns[k, i] = Ev_hh_quat_ns
+                        Ev_lh_ns[k, i] = Ev_lh_quat_ns
+                        Ev_sh_ns[k, i] = Ev_sh_quat_ns
 
-        patches = []
-        liness = []
-        for col_ind in range(4):
-            patches.append(mpatches.Patch(color=colors[col_ind], label=leg_no_T[col_ind]))
-            label = "T K".replace("T", str(temperature[col_ind]))
-            liness.append(mlines.Line2D([], [], color='black', linestyle=linestyles[col_ind],
-                                        label=label))
+                    elif x == boundary_AB or x == boundary_BA:
+                        Ec[k, i] = (Ec_quat + Eg_GaAs + VBO_GaAS) / 2
+                        Ev_hh[k, i] = (Ev_hh_quat + VBO_GaAS) / 2
+                        Ev_lh[k, i] = (Ev_lh_quat + VBO_GaAS) / 2
+                        Ev_sh[k, i] = (Ev_sh_quat + VBO_GaAS) / 2
+                        Ec_ns[k, i] = (Ec_quat_ns + Eg_GaAs + VBO_GaAS) / 2
+                        Ev_hh_ns[k, i] = (Ev_hh_quat_ns + VBO_GaAS) / 2
+                        Ev_lh_ns[k, i] = (Ev_lh_quat_ns + VBO_GaAS) / 2
+                        Ev_sh_ns[k, i] = (Ev_sh_quat_ns + VBO_GaAS) / 2
+                    else:
+                        print("Error")
 
-        first_leg = plt.legend(handles=patches, loc='lower left')
-        plt.gca().add_artist(first_leg)
-        second_leg = plt.legend(handles=liness, loc='upper left')
-        plt.gca().add_artist(second_leg)
-        filename = ''
-        if fix_arg == 'fix_x':
-            filename = folder + 'x_' + str(fix) + 'y_' + str(var[0]) + '_strain' + ext
-        else:
-            filename = folder + 'x_' + str(var[0]) + 'y_' + str(fix) + '_strain' + ext
-        plt.savefig(filename)
-        plt.gca().clear()
+            baxes.append(brokenaxes(ylims=ylims[spsi], hspace=.1, subplot_spec=spss[spsi], d=0.01))
+
+            for k in range(len(temperature)):
+                baxes[spsi].plot(xx, Ec[k, :], color=colors[0], linestyle=linestyles[k], linewidth=linewidth)
+                baxes[spsi].plot(xx, Ev_hh[k, :], color=colors[1], linestyle=linestyles[k], linewidth=linewidth)
+                baxes[spsi].plot(xx, Ev_lh[k, :], color=colors[2], linestyle=linestyles[k], linewidth=linewidth)
+                baxes[spsi].plot(xx, Ev_sh[k, :], color=colors[3], linestyle=linestyles[k], linewidth=linewidth)
+            # baxes[spsi].plot(xx, Ec_ns[k, :], color=colors[0], linestyle=linestyles[0], linewidth=linewidth)
+            # baxes[spsi].plot(xx, Ev_hh_ns[k, :], color=colors[1], linestyle=linestyles[0], linewidth=linewidth)
+            # baxes[spsi].plot(xx, Ev_lh_ns[k, :], color=colors[2], linestyle=linestyles[0], linewidth=linewidth)
+            # baxes[spsi].plot(xx, Ev_sh_ns[k, :], color=colors[3], linestyle=linestyles[0], linewidth=linewidth)
+            if spsi == 0:
+                baxes[spsi].annotate(text='50 nm', xy=(boundary_AB - 5.0, 0.0), xytext=(boundary_BA + 11.0, -0.04),
+                                     arrowprops={'arrowstyle': '<->', 'shrinkA': 0, 'shrinkB': 0,
+                                                 'mutation_scale': 5})
+
+            spsi += 1
+            patches = []
+            lines = []
+            for col_ind in range(len(temperature)): #len(temperature)
+                patches.append(mpatches.Patch(color=colors[col_ind], label=leg_no_T[col_ind]))
+                label = "T K".replace("T", str(temperature[col_ind]))
+                lines.append(mlines.Line2D([], [], color='black', linestyle=linestyles[col_ind],
+                                           label=label))
+            # label1 = "z naprężeniami"
+            # lines.append(mlines.Line2D([], [], color='black', linestyle=linestyles[2],
+            #                            label=label1))
+            # label2 = "bez naprężeń"
+            # lines.append(mlines.Line2D([], [], color='black', linestyle=linestyles[0],
+            #                            label=label2))
+            if spsi == 4:
+                hh = [patches, lines]
+                flat_list = sum(hh, [])
+                handles, labels = baxes[spsi - 1].get_legend_handles_labels()
+                fig.legend(handles=flat_list, loc='upper center', ncol=4, fontsize=legend_fontsize)
+
+
+filename = folder + 'temp_strain' + ext
+fig.text(0.5, 0.03, 'Grubość warstwy [nm]', ha='center')
+fig.text(0.02, 0.5, 'Energia [eV]', va='center', rotation='vertical')
+plt.text(0.1, 0.9, textt[3], ha='center', fontsize=7)
+plt.text(0.1, 2.1, textt[1], ha='center', fontsize=7)
+plt.text(-1.15, 0.9, textt[2], ha='center', fontsize=7)
+plt.text(-1.15, 2.1, textt[0], ha='center', fontsize=7)
+plt.savefig(filename)
+plt.show()
 
 print('Program finished in ', time.time() - start, ' s.')
