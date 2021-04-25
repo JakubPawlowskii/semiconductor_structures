@@ -370,7 +370,7 @@ Wyniki obliczeń przedstawiono na wykresach.\\
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width = \linewidth]{Figures/ternary/Eg_alc.pdf}
+	\includegraphics[width = 0.8\linewidth]{Figures/ternary/Eg_alc.pdf}
 	\caption{Wykres przedstawiający szerokość przerwy wzbronionej w zależności od parametru sieci.
 	Zamknięta krzywa stanowi ścieżkę łączącą różne materiały trójskładnikowe.}\label{fig:Eg_alc}
 \end{figure}
@@ -677,8 +677,7 @@ badanej cienkiej warstwy w temperaturze \(T = 300[K]\). Uwzględnienie odkształ
 oraz do rozszczepienia pasma walencyjnego na pasmo ciężkodziurowe, lekkodziurowe i rozszczepione
 spin-orbitalnie. Są to wyniki zgodne z otrzymanymi w sekcji~\ref{sec:strain}.
 Obserwujemy różne typy nieciągłości pasm np. Typ I na panelu (d)
-oraz oraz Typ III na panelu (a) i (b). Typy mogą zależeć od tego, które z rozszczepionych
-pasm walencyjnych weźmiemy pod uwagę. Widać również zależność typu nieciągłości
+oraz oraz Typ III na panelu (a) i (b). Widać również zależność typu nieciągłości
 od składu.
 
 Na Rysunku~\ref{fig:strain_temp} znajdują się profile energetyczne z odkształceniami, dla
@@ -699,8 +698,74 @@ struktury.
 	(d) \BPChem{Al\_{0.5}Ga\_{0.5}As\_{0.9}Sb\_{0.1}}}\label{fig:strain_temp}
 \end{figure}
 
+\section{Grubość krytyczna}
 
+W tej części zajmiemy się oszacowaniem grubości krytycznej, jaką może osiągnąć cienka
+warstwa \BPChem{Al\_{x}Ga\_{1-x}As\_{y}Sb\_{1-y}} wzrastająca na podłożu \BPChem{GaAs}.
+Ponieważ między substratem a cienką warstwą występuje niedopasowanie sieciowe, komórki
+elementarne materiału cienkiej warstwy są rozciągane w jednym kierunku i ściskane w drugim.
+Wraz z dokładaniem kolejnych warstw materiału naprężenia rosną, aż dochodzi do powstania
+pęknięcia bądź innego defektu, co prowadzi do zmniejszenia naprężeń w strukturze.
+Maksymalną grubość warstwy, którą możemy osadzić na podłożu nazywamy grubością krytyczną
+\(h_c\).
 
+W celu oszacowania tej grubości posłużymy się równaniem Matthews-Blakeslee dla mieszanin
+związków III-V:
+\begin{equation}
+	h_c = \frac{b}{2\pi f} \frac{1-0.25\nu}{1+\nu}\left( \ln{\frac{h_c}{b} +1}\right)
+\label{eq:matblak}
+\end{equation}
+Wielkości występujące w tym równaniu to:
+\begin{align*}
+	b &= \frac{a}{\sqrt{2}} \;\text{- wektor Burgersa}\\
+	\nu &= \frac{C_{12}}{C_{11}+C_{12}} \;\text{- współczynnik Poissona}\\
+	f &= \abs{\frac{a_s-a}{a}} \; \text{- odkształcenie}
+\end{align*}
+Parametr \(a_s\) jest stałą sieci \BPChem{GaAs} i został wzięty z tabeli~\ref{tab:binary}.
+Parametry \(a\), \(C_{11}\), \(C_{12}\) to odpowiednio stała sieci oraz parametry sztywności
+\BPChem{Al\_{x}Ga\_{1-x}As\_{y}Sb\_{1-y}} wyznaczone poprzez interpolacje parametrów materiałów
+binarnych z tabeli~\ref{tab:binary} oraz~\ref{tab:strain_params}.
+
+Równanie~\ref{eq:matblak} jest nieliniowym, uwikłanym równaniem i nie możemy znaleźć analitycznego
+rozwiązania. W celu jego numerycznego rozwiązania przedstawimy je w postaci:
+\begin{equation}
+	f(h_c) = \frac{b}{2\pi f} \frac{1-0.25\nu}{1+\nu}\left( \ln{\frac{h_c}{b} +1}\right) - h_c
+	\label{eq:fhc}
+\end{equation}
+i poszukamy miejsc zerowych funkcji \(f(h_c)\).
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width = 0.8\linewidth]{Figures/thickness/fhc.pdf}
+	\caption{Wykres funkcji \(f(h_c)\) dla różnych kilku różnych zestawów parametrów. Widoczne są miejsca
+	interesujące nas miejsca zerowe tej funkcji, dla grubości rzędu kilku \AA. Ponieważ dla dużych wartości
+	\(h_c\) człon liniowy zaczyna dominować nad członem logarytmicznym, funkcja zaczyna maleć i po raz kolejny przecina zero.
+	Jednak te miejsca zerowe będą odpowiadały dziesiątkom a nawet setkom \AA{} i nie są interesującymi rozwiązaniami z punktu
+	widzenia rzeczywistej grubości krytycznej.}
+	\label{fig:fhc}
+\end{figure}
+
+Jak widać na rysunku~\ref{fig:fhc}, funkcja \(f(h_c)\) ma prosty przebieg, i do znalezienia jej pierwiastków
+nie potrzeba wyrafinowanych metod numerycznych. Dla prostoty posłużymy się implementacją w języku Python metody Brenta, będącą hybrydą metody
+bisekcji, metody siecznych oraz odwrotnej interpolacji kwadratowej~\autocite{Brent1974}.
+
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/thickness/fix_x.pdf}\label{fig:hcx}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\includegraphics[width = \linewidth]{Figures/thickness/fix_y.pdf}\label{fig:hcy}
+\end{minipage}
+\begin{center}
+\captionof{figure}{Grubości krytyczne \BPChem{Al\_{x}Ga\_{1-x}As\_{y}Sb\_{1-y}} odkładanego na podłożu \BPChem{GaAs}, w temperaturze \(T = 300K\).
+Panel \((a)\) przedstawia zależność grubości krytycznej od ułamka molowego y, dla ustalonego x.
+Panel \((b)\) przedstawia zależność grubości krytycznej od ułamka molowego x, dla ustalonego y.}\label{fig:hc}
+\end{center}
+
+Wyniki numerycznego poszukiwania pierwiastków równania~\ref{eq:fhc} przedstawione są 
+na rysunku~\ref{fig:hc}. Widać, że czynnikiem mającym największy wpływ na grubość krytyczną jest
+zawartość \BPChem{GaAs} w naszym stopie czteroskładnikowym. Jest wynik zgodny z intuicją, ponieważ
+większa zawartość \BPChem{GaAs} skutkuje lepszym dopasowaniem sieciowym do podłoża i tym samym
+mniejszymi naprężeniami w badanej strukturze. 
 
 \chapter{Wyniki i dyskusja}\label{chapt:results}
 
