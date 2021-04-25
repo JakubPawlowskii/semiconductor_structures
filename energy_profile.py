@@ -178,7 +178,7 @@ for i, T in enumerate(temperature):
             energies[i][fix_arg][fix_key]["Ev_sh"] = quaternary_params_with_temperature[i][fix_arg][fix_key]["VBO"] + \
                                                      deformation_params[i][fix_arg][fix_key]["dEv_hydro"] + \
                                                      deformation_params[i][fix_arg][fix_key]["dEv_biax_minus"]
-            energies_no_strain[i][fix_arg][fix_key]["Ev_sh"] = quaternary_params_with_temperature[i][fix_arg][fix_key]["VBO"]
+            energies_no_strain[i][fix_arg][fix_key]["Ev_sh"] = quaternary_params_with_temperature[i][fix_arg][fix_key]["VBO"] - delta_so
 
 Ec = np.zeros((len(temperature), len(xx)))
 Ev_hh = np.zeros((len(temperature), len(xx)))
@@ -197,8 +197,8 @@ spss = [sps[0, 0], sps[0, 1], sps[1, 0], sps[1, 1]]
 spsi = 0
 filename = ''
 baxes = []
-ylims = [((-1.0, 0.1), (0.4, 1.2)), ((-1.0, -0.55), (0.5, 0.85)),
-         ((-1.3, -0.7), (0.45, 1.0)), ((-1.5, -0.4), (0.4, 1.3))]
+ylims = [((-1.4, 0.1), (0.4, 1.2)), ((-1.25, -0.55), (0.5, 0.9)),
+         ((-1.2, -0.7), (0.54, 0.9)), ((-1.5, -0.7), (0.4, 1.3))]
 textt = ['(a)', '(b)', '(c)', '(d)']
 textx = 50
 texty = [1.0, 0.8, 0.9, 1.0]
@@ -217,7 +217,8 @@ for var_i in range(2):
                 title = 'x = ' + str(var[var_i]) + ' y = ' + str(fix)
             if title not in titles:
                 continue
-
+            else:
+                print(title)
             for k, T in enumerate(temperature):
                 Eg_GaAs = par.GaAs["Eg"] - (par.GaAs["alpha"] * (T ** 2) / (T + par.GaAs["beta"]))
                 Ec_quat = energies[k][fix_arg][fix_key]["Ec"][var_i]
@@ -234,11 +235,11 @@ for var_i in range(2):
                         Ec[k, i] = Eg_GaAs + VBO_GaAS
                         Ev_hh[k, i] = VBO_GaAS
                         Ev_lh[k, i] = VBO_GaAS
-                        Ev_sh[k, i] = VBO_GaAS
+                        Ev_sh[k, i] = VBO_GaAS - par.GaAs["delta_so"]
                         Ec_ns[k, i] = Eg_GaAs + VBO_GaAS
                         Ev_hh_ns[k, i] = VBO_GaAS
                         Ev_lh_ns[k, i] = VBO_GaAS
-                        Ev_sh_ns[k, i] = VBO_GaAS
+                        Ev_sh_ns[k, i] = VBO_GaAS - par.GaAs["delta_so"]
                     elif boundary_AB < x < boundary_BA:
                         Ec[k, i] = Ec_quat
                         Ev_hh[k, i] = Ev_hh_quat
@@ -253,11 +254,11 @@ for var_i in range(2):
                         Ec[k, i] = (Ec_quat + Eg_GaAs + VBO_GaAS) / 2
                         Ev_hh[k, i] = (Ev_hh_quat + VBO_GaAS) / 2
                         Ev_lh[k, i] = (Ev_lh_quat + VBO_GaAS) / 2
-                        Ev_sh[k, i] = (Ev_sh_quat + VBO_GaAS) / 2
+                        Ev_sh[k, i] = (Ev_sh_quat + VBO_GaAS - par.GaAs["delta_so"]) / 2
                         Ec_ns[k, i] = (Ec_quat_ns + Eg_GaAs + VBO_GaAS) / 2
                         Ev_hh_ns[k, i] = (Ev_hh_quat_ns + VBO_GaAS) / 2
                         Ev_lh_ns[k, i] = (Ev_lh_quat_ns + VBO_GaAS) / 2
-                        Ev_sh_ns[k, i] = (Ev_sh_quat_ns + VBO_GaAS) / 2
+                        Ev_sh_ns[k, i] = (Ev_sh_quat_ns + VBO_GaAS - par.GaAs["delta_so"]) / 2
                     else:
                         print("Error")
 
@@ -268,10 +269,10 @@ for var_i in range(2):
                 baxes[spsi].plot(xx, Ev_hh[k, :], color=colors[1], linestyle=linestyles[k], linewidth=linewidth)
                 baxes[spsi].plot(xx, Ev_lh[k, :], color=colors[2], linestyle=linestyles[k], linewidth=linewidth)
                 baxes[spsi].plot(xx, Ev_sh[k, :], color=colors[3], linestyle=linestyles[k], linewidth=linewidth)
-            # baxes[spsi].plot(xx, Ec_ns[k, :], color=colors[0], linestyle=linestyles[0], linewidth=linewidth)
-            # baxes[spsi].plot(xx, Ev_hh_ns[k, :], color=colors[1], linestyle=linestyles[0], linewidth=linewidth)
-            # baxes[spsi].plot(xx, Ev_lh_ns[k, :], color=colors[2], linestyle=linestyles[0], linewidth=linewidth)
-            # baxes[spsi].plot(xx, Ev_sh_ns[k, :], color=colors[3], linestyle=linestyles[0], linewidth=linewidth)
+                # baxes[spsi].plot(xx, Ec_ns[k, :], color=colors[0], linestyle=linestyles[0], linewidth=linewidth)
+                # baxes[spsi].plot(xx, Ev_hh_ns[k, :], color=colors[1], linestyle=linestyles[0], linewidth=linewidth)
+                # baxes[spsi].plot(xx, Ev_lh_ns[k, :], color=colors[2], linestyle=linestyles[0], linewidth=linewidth)
+                # baxes[spsi].plot(xx, Ev_sh_ns[k, :], color=colors[3], linestyle=linestyles[0], linewidth=linewidth)
             if spsi == 0:
                 baxes[spsi].annotate(text='50 nm', xy=(boundary_AB - 5.0, 0.0), xytext=(boundary_BA + 11.0, -0.04),
                                      arrowprops={'arrowstyle': '<->', 'shrinkA': 0, 'shrinkB': 0,
@@ -280,15 +281,15 @@ for var_i in range(2):
             spsi += 1
             patches = []
             lines = []
-            for col_ind in range(len(temperature)): #len(temperature)
+            for col_ind in range(4): #len(temperature)
                 patches.append(mpatches.Patch(color=colors[col_ind], label=leg_no_T[col_ind]))
                 label = "T K".replace("T", str(temperature[col_ind]))
                 lines.append(mlines.Line2D([], [], color='black', linestyle=linestyles[col_ind],
                                            label=label))
-            # label1 = "z naprężeniami"
+            # label1 = "z odkształceniami"
             # lines.append(mlines.Line2D([], [], color='black', linestyle=linestyles[2],
             #                            label=label1))
-            # label2 = "bez naprężeń"
+            # label2 = "bez odkształceń"
             # lines.append(mlines.Line2D([], [], color='black', linestyle=linestyles[0],
             #                            label=label2))
             if spsi == 4:
