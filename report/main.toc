@@ -11,6 +11,8 @@
 \contentsline {section}{\numberline {2.4}Odkształcenia przy wzroście epitaksjalnym na podłożu GaAs. Wpływ temperatury.}{7}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Profile energetyczne cienkich warstw.}{13}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Grubość krytyczna}{14}{section.2.6}%
-\contentsline {chapter}{\numberline {3}Wyniki i dyskusja}{16}{chapter.3}%
-\contentsline {chapter}{Dodatek: Wykresy parametrów materiałów trójskładnikowych}{16}{chapter*.9}%
-\contentsline {chapter}{Bibliografia}{18}{figure.3.1}%
+\contentsline {section}{\numberline {2.7}Przybliżenie paraboliczne. Struktura pasmowa i gęstość stanów. }{16}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Gęstość nośników}{20}{section.2.8}%
+\contentsline {chapter}{Dodatek 1: Wykresy parametrów materiałów trójskładnikowych}{23}{chapter*.10}%
+\contentsline {chapter}{Dodatek 2: Zależność gęstości stanów od składu i grubości cienkiej warstwy}{24}{chapter*.11}%
+\contentsline {chapter}{Bibliografia}{25}{figure.2.22}%

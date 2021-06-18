@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.26)  26 APR 2021 10:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.26)  14 JUN 2021 13:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -967,7 +967,7 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 15
  (c:/texlive/2020/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-<Figures/pwr.png, id=67, 503.481pt x 107.4414pt>
+<Figures/pwr.png, id=75, 503.481pt x 107.4414pt>
 File: Figures/pwr.png Graphic file (type png)
 <use Figures/pwr.png>
 Package pdftex.def Info: Figures/pwr.png  used on input line 163.
@@ -996,11 +996,36 @@ Overfull \hbox (19.20049pt too wide) in paragraph at lines 15--15
  \T1/ptm/m/n/12 r¦. od-ksztaª-ce-nia zo-sta-ªy uwzgl¦d-nio-ne. Skªa-dy ma-te-ria-ªu B: (a) Al$[]$Ga$[]$As$[]$Sb$[]$, 
  []
 
-)
+
+Overfull \hbox (41.05772pt too wide) in paragraph at lines 19--19
+ \T1/ptm/m/n/12 ksztaª-ce-nia dla tem-pe-ra-tu-ry $\OML/cmm/m/it/12 T \OT1/cmr/m/n/12 = 300 \OML/cmm/m/it/12 K$\T1/ptm/m/n/12 . (a) Al$[]$Ga$[]$As$[]$Sb$[]$, (b) Al$[]$Ga$[]$As$[]$Sb$[]$, 
+ []
+
+
+Overfull \hbox (20.28038pt too wide) in paragraph at lines 20--20
+ [][] [][][]\T1/ptm/m/n/12 Struktury pa-smo-we oraz g¦-sto-±ci sta-nów ma-te-ria-ªu czte-ro-skªad-ni-ko-we-go, z uwzgl¦d- 
+ []
+
+
+Overfull \hbox (35.66508pt too wide) in paragraph at lines 20--20
+ \T1/ptm/m/n/12 nie-niem od-ksztaª-ce« tem-pe-ra-tu-ro-wych. (a) Al$[]$Ga$[]$As$[]$Sb$[]$, (b) Al$[]$Ga$[]$As$[]$Sb$[]$, 
+ []
+
+
+Overfull \hbox (5.71803pt too wide) in paragraph at lines 22--22
+ [][] [][][]\T1/ptm/m/n/12 Zale»no±¢ kon-cen-tra-cji no-±ni-ków od po-ªo-»e-nia po-zio-mu Fer-mie-go w $\OML/cmm/m/it/12 T \OT1/cmr/m/n/12 = 300 \OML/cmm/m/it/12 K$\T1/ptm/m/n/12 . 
+ []
+
+
+Overfull \hbox (2.78503pt too wide) in paragraph at lines 23--23
+ [][] [][][]\T1/ptm/m/n/12 Zale»no±¢ tem-pe-ra-tu-ro-wa po-zio-mu Fer-mie-go oraz kon-cen-tra-cji no-±ni-ków w rów- 
+ []
+
+[3])
 \tf@lof=\write9
 \openout9 = `main.lof'.
 
- [3]
+ [4]
 Rozdzia\PlPrIeC {\l } 1.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 203.
 (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ptm.fd
@@ -1024,7 +1049,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 368--370
 
  []
 
-<Figures/ternary/Eg_alc.pdf, id=257, 462.52798pt x 346.89601pt>
+<Figures/ternary/Eg_alc.pdf, id=304, 462.52798pt x 346.89601pt>
 File: Figures/ternary/Eg_alc.pdf Graphic file (type pdf)
 <use Figures/ternary/Eg_alc.pdf>
 Package pdftex.def Info: Figures/ternary/Eg_alc.pdf  used on input line 373.
@@ -1042,12 +1067,12 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 387.
 
-<Figures/quaternary/quat_eg_x.pdf, id=332, 462.52798pt x 346.89601pt>
+<Figures/quaternary/quat_eg_x.pdf, id=380, 462.52798pt x 346.89601pt>
 File: Figures/quaternary/quat_eg_x.pdf Graphic file (type pdf)
 <use Figures/quaternary/quat_eg_x.pdf>
 Package pdftex.def Info: Figures/quaternary/quat_eg_x.pdf  used on input line 395.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
-<Figures/quaternary/quat_vbo_x.pdf, id=333, 462.52798pt x 346.89601pt>
+<Figures/quaternary/quat_vbo_x.pdf, id=381, 462.52798pt x 346.89601pt>
 File: Figures/quaternary/quat_vbo_x.pdf Graphic file (type pdf)
 <use Figures/quaternary/quat_vbo_x.pdf>
 Package pdftex.def Info: Figures/quaternary/quat_vbo_x.pdf  used on input line 398.
@@ -1057,12 +1082,12 @@ Overfull \hbox (14.28003pt too wide) in paragraph at lines 394--400
 [][] [] 
  []
 
-<Figures/quaternary/quat_delta_so_x.pdf, id=334, 462.52798pt x 346.89601pt>
+<Figures/quaternary/quat_delta_so_x.pdf, id=382, 462.52798pt x 346.89601pt>
 File: Figures/quaternary/quat_delta_so_x.pdf Graphic file (type pdf)
 <use Figures/quaternary/quat_delta_so_x.pdf>
 Package pdftex.def Info: Figures/quaternary/quat_delta_so_x.pdf  used on input line 402.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
-<Figures/quaternary/quat_alc_x.pdf, id=335, 462.52798pt x 346.89601pt>
+<Figures/quaternary/quat_alc_x.pdf, id=383, 462.52798pt x 346.89601pt>
 File: Figures/quaternary/quat_alc_x.pdf Graphic file (type pdf)
 <use Figures/quaternary/quat_alc_x.pdf>
 Package pdftex.def Info: Figures/quaternary/quat_alc_x.pdf  used on input line 405.
@@ -1072,12 +1097,12 @@ Overfull \hbox (14.28003pt too wide) in paragraph at lines 401--407
 [][] [] 
  []
 
-<Figures/quaternary/quat_m_hh_x.pdf, id=336, 462.52798pt x 346.89601pt>
+<Figures/quaternary/quat_m_hh_x.pdf, id=384, 462.52798pt x 346.89601pt>
 File: Figures/quaternary/quat_m_hh_x.pdf Graphic file (type pdf)
 <use Figures/quaternary/quat_m_hh_x.pdf>
 Package pdftex.def Info: Figures/quaternary/quat_m_hh_x.pdf  used on input line 409.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
-<Figures/quaternary/quat_m_lh_x.pdf, id=337, 462.52798pt x 346.89601pt>
+<Figures/quaternary/quat_m_lh_x.pdf, id=385, 462.52798pt x 346.89601pt>
 File: Figures/quaternary/quat_m_lh_x.pdf Graphic file (type pdf)
 <use Figures/quaternary/quat_m_lh_x.pdf>
 Package pdftex.def Info: Figures/quaternary/quat_m_lh_x.pdf  used on input line 412.
@@ -1087,7 +1112,7 @@ Overfull \hbox (14.28003pt too wide) in paragraph at lines 408--414
 [][] [] 
  []
 
-<Figures/quaternary/quat_m_e_x.pdf, id=338, 462.52798pt x 346.89601pt>
+<Figures/quaternary/quat_m_e_x.pdf, id=386, 462.52798pt x 346.89601pt>
 File: Figures/quaternary/quat_m_e_x.pdf Graphic file (type pdf)
 <use Figures/quaternary/quat_m_e_x.pdf>
 Package pdftex.def Info: Figures/quaternary/quat_m_e_x.pdf  used on input line 417.
@@ -1121,12 +1146,12 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 423.
 
-<Figures/quaternary/quat_eg_y.pdf, id=600, 462.52798pt x 346.89601pt>
+<Figures/quaternary/quat_eg_y.pdf, id=647, 462.52798pt x 346.89601pt>
 File: Figures/quaternary/quat_eg_y.pdf Graphic file (type pdf)
 <use Figures/quaternary/quat_eg_y.pdf>
 Package pdftex.def Info: Figures/quaternary/quat_eg_y.pdf  used on input line 431.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
-<Figures/quaternary/quat_vbo_y.pdf, id=601, 462.52798pt x 346.89601pt>
+<Figures/quaternary/quat_vbo_y.pdf, id=648, 462.52798pt x 346.89601pt>
 File: Figures/quaternary/quat_vbo_y.pdf Graphic file (type pdf)
 <use Figures/quaternary/quat_vbo_y.pdf>
 Package pdftex.def Info: Figures/quaternary/quat_vbo_y.pdf  used on input line 434.
@@ -1136,12 +1161,12 @@ Overfull \hbox (14.28003pt too wide) in paragraph at lines 430--436
 [][] [] 
  []
 
-<Figures/quaternary/quat_delta_so_y.pdf, id=602, 462.52798pt x 346.89601pt>
+<Figures/quaternary/quat_delta_so_y.pdf, id=649, 462.52798pt x 346.89601pt>
 File: Figures/quaternary/quat_delta_so_y.pdf Graphic file (type pdf)
 <use Figures/quaternary/quat_delta_so_y.pdf>
 Package pdftex.def Info: Figures/quaternary/quat_delta_so_y.pdf  used on input line 438.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
-<Figures/quaternary/quat_alc_y.pdf, id=603, 462.52798pt x 346.89601pt>
+<Figures/quaternary/quat_alc_y.pdf, id=650, 462.52798pt x 346.89601pt>
 File: Figures/quaternary/quat_alc_y.pdf Graphic file (type pdf)
 <use Figures/quaternary/quat_alc_y.pdf>
 Package pdftex.def Info: Figures/quaternary/quat_alc_y.pdf  used on input line 441.
@@ -1151,12 +1176,12 @@ Overfull \hbox (14.28003pt too wide) in paragraph at lines 437--443
 [][] [] 
  []
 
-<Figures/quaternary/quat_m_hh_y.pdf, id=604, 462.52798pt x 346.89601pt>
+<Figures/quaternary/quat_m_hh_y.pdf, id=651, 462.52798pt x 346.89601pt>
 File: Figures/quaternary/quat_m_hh_y.pdf Graphic file (type pdf)
 <use Figures/quaternary/quat_m_hh_y.pdf>
 Package pdftex.def Info: Figures/quaternary/quat_m_hh_y.pdf  used on input line 445.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
-<Figures/quaternary/quat_m_lh_y.pdf, id=605, 462.52798pt x 346.89601pt>
+<Figures/quaternary/quat_m_lh_y.pdf, id=652, 462.52798pt x 346.89601pt>
 File: Figures/quaternary/quat_m_lh_y.pdf Graphic file (type pdf)
 <use Figures/quaternary/quat_m_lh_y.pdf>
 Package pdftex.def Info: Figures/quaternary/quat_m_lh_y.pdf  used on input line 448.
@@ -1179,7 +1204,7 @@ pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductor
 
 pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/quaternary/quat_alc_y.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<Figures/quaternary/quat_m_e_y.pdf, id=817, 462.52798pt x 346.89601pt>
+<Figures/quaternary/quat_m_e_y.pdf, id=865, 462.52798pt x 346.89601pt>
 File: Figures/quaternary/quat_m_e_y.pdf Graphic file (type pdf)
 <use Figures/quaternary/quat_m_e_y.pdf>
 Package pdftex.def Info: Figures/quaternary/quat_m_e_y.pdf  used on input line 453.
@@ -1190,7 +1215,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 456.
 See the caption package documentation for explanation.
 
-<Figures/strain.jpg, id=818, 199.10146pt x 122.04536pt>
+<Figures/strain.jpg, id=866, 199.10146pt x 122.04536pt>
 File: Figures/strain.jpg Graphic file (type jpg)
 <use Figures/strain.jpg>
 Package pdftex.def Info: Figures/strain.jpg  used on input line 484.
@@ -1202,12 +1227,12 @@ pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductor
 
 pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/quaternary/quat_m_e_y.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<Figures/strain/ter_alc1.pdf, id=968, 462.52798pt x 346.89601pt>
+<Figures/strain/ter_alc1.pdf, id=1015, 462.52798pt x 346.89601pt>
 File: Figures/strain/ter_alc1.pdf Graphic file (type pdf)
 <use Figures/strain/ter_alc1.pdf>
 Package pdftex.def Info: Figures/strain/ter_alc1.pdf  used on input line 526.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
-<Figures/strain/ter_eg1.pdf, id=969, 462.52798pt x 346.89601pt>
+<Figures/strain/ter_eg1.pdf, id=1016, 462.52798pt x 346.89601pt>
 File: Figures/strain/ter_eg1.pdf Graphic file (type pdf)
 <use Figures/strain/ter_eg1.pdf>
 Package pdftex.def Info: Figures/strain/ter_eg1.pdf  used on input line 529.
@@ -1218,12 +1243,12 @@ Overfull \hbox (14.28003pt too wide) in paragraph at lines 525--531
  []
 
 [8 <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/strain.jpg>]
-<Figures/strain/ter_alc2.pdf, id=977, 462.52798pt x 346.89601pt>
+<Figures/strain/ter_alc2.pdf, id=1024, 462.52798pt x 346.89601pt>
 File: Figures/strain/ter_alc2.pdf Graphic file (type pdf)
 <use Figures/strain/ter_alc2.pdf>
 Package pdftex.def Info: Figures/strain/ter_alc2.pdf  used on input line 533.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
-<Figures/strain/ter_eg2.pdf, id=978, 462.52798pt x 346.89601pt>
+<Figures/strain/ter_eg2.pdf, id=1025, 462.52798pt x 346.89601pt>
 File: Figures/strain/ter_eg2.pdf Graphic file (type pdf)
 <use Figures/strain/ter_eg2.pdf>
 Package pdftex.def Info: Figures/strain/ter_eg2.pdf  used on input line 536.
@@ -1244,22 +1269,22 @@ Overfull \hbox (0.92413pt too wide) in paragraph at lines 543--547
  []
 
 
-Overfull \hbox (12.73985pt too wide) in paragraph at lines 557--561
+Overfull \hbox (12.73985pt too wide) in paragraph at lines 558--562
 \T1/ptm/m/n/12 czte-ro-skªad-ni-ko-we-go. Przyj-mu-je-my, »e nasz ma-te-riaª ma wzór ste-chio-me-trycz-ny Al$[]$Ga$[]$As$[]$Sb$[]$. 
  []
 
-<Figures/strain/alc1.pdf, id=979, 462.52798pt x 346.89601pt>
+<Figures/strain/alc1.pdf, id=1026, 462.52798pt x 346.89601pt>
 File: Figures/strain/alc1.pdf Graphic file (type pdf)
 <use Figures/strain/alc1.pdf>
-Package pdftex.def Info: Figures/strain/alc1.pdf  used on input line 563.
+Package pdftex.def Info: Figures/strain/alc1.pdf  used on input line 564.
 (pdftex.def)             Requested size: 205.87714pt x 154.40793pt.
-<Figures/strain/eg1.pdf, id=980, 462.52798pt x 346.89601pt>
+<Figures/strain/eg1.pdf, id=1027, 462.52798pt x 346.89601pt>
 File: Figures/strain/eg1.pdf Graphic file (type pdf)
 <use Figures/strain/eg1.pdf>
-Package pdftex.def Info: Figures/strain/eg1.pdf  used on input line 566.
+Package pdftex.def Info: Figures/strain/eg1.pdf  used on input line 567.
 (pdftex.def)             Requested size: 205.87714pt x 154.40793pt.
 
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 562--568
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 563--569
 [][] [] 
  []
 
@@ -1273,59 +1298,59 @@ pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductor
 
 pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/strain/ter_eg2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<Figures/strain/eps_orth1.pdf, id=1144, 462.52798pt x 346.89601pt>
+<Figures/strain/eps_orth1.pdf, id=1193, 462.52798pt x 346.89601pt>
 File: Figures/strain/eps_orth1.pdf Graphic file (type pdf)
 <use Figures/strain/eps_orth1.pdf>
-Package pdftex.def Info: Figures/strain/eps_orth1.pdf  used on input line 570.
+Package pdftex.def Info: Figures/strain/eps_orth1.pdf  used on input line 571.
 (pdftex.def)             Requested size: 205.87714pt x 154.40793pt.
-<Figures/strain/eps_par1.pdf, id=1145, 462.52798pt x 346.89601pt>
+<Figures/strain/eps_par1.pdf, id=1194, 462.52798pt x 346.89601pt>
 File: Figures/strain/eps_par1.pdf Graphic file (type pdf)
 <use Figures/strain/eps_par1.pdf>
-Package pdftex.def Info: Figures/strain/eps_par1.pdf  used on input line 573.
+Package pdftex.def Info: Figures/strain/eps_par1.pdf  used on input line 574.
 (pdftex.def)             Requested size: 205.87714pt x 154.40793pt.
 
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 569--575
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 570--576
 [][] [] 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 577.
+(caption)                particular \caption on input line 578.
 See the caption package documentation for explanation.
 
-<Figures/strain/alc2.pdf, id=1146, 462.52798pt x 346.89601pt>
+<Figures/strain/alc2.pdf, id=1195, 462.52798pt x 346.89601pt>
 File: Figures/strain/alc2.pdf Graphic file (type pdf)
 <use Figures/strain/alc2.pdf>
-Package pdftex.def Info: Figures/strain/alc2.pdf  used on input line 581.
+Package pdftex.def Info: Figures/strain/alc2.pdf  used on input line 582.
 (pdftex.def)             Requested size: 205.87714pt x 154.40793pt.
-<Figures/strain/eg2.pdf, id=1147, 462.52798pt x 346.89601pt>
+<Figures/strain/eg2.pdf, id=1196, 462.52798pt x 346.89601pt>
 File: Figures/strain/eg2.pdf Graphic file (type pdf)
 <use Figures/strain/eg2.pdf>
-Package pdftex.def Info: Figures/strain/eg2.pdf  used on input line 584.
+Package pdftex.def Info: Figures/strain/eg2.pdf  used on input line 585.
 (pdftex.def)             Requested size: 205.87714pt x 154.40793pt.
 
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 580--586
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 581--587
 [][] [] 
  []
 
-<Figures/strain/eps_orth2.pdf, id=1148, 462.52798pt x 346.89601pt>
+<Figures/strain/eps_orth2.pdf, id=1197, 462.52798pt x 346.89601pt>
 File: Figures/strain/eps_orth2.pdf Graphic file (type pdf)
 <use Figures/strain/eps_orth2.pdf>
-Package pdftex.def Info: Figures/strain/eps_orth2.pdf  used on input line 588.
+Package pdftex.def Info: Figures/strain/eps_orth2.pdf  used on input line 589.
 (pdftex.def)             Requested size: 205.87714pt x 154.40793pt.
-<Figures/strain/eps_par2.pdf, id=1149, 462.52798pt x 346.89601pt>
+<Figures/strain/eps_par2.pdf, id=1198, 462.52798pt x 346.89601pt>
 File: Figures/strain/eps_par2.pdf Graphic file (type pdf)
 <use Figures/strain/eps_par2.pdf>
-Package pdftex.def Info: Figures/strain/eps_par2.pdf  used on input line 591.
+Package pdftex.def Info: Figures/strain/eps_par2.pdf  used on input line 592.
 (pdftex.def)             Requested size: 205.87714pt x 154.40793pt.
 
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 587--593
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 588--594
 [][] [] 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 594.
+(caption)                particular \caption on input line 595.
 See the caption package documentation for explanation.
 
 [10 <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/strain/alc1.pdf> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/strain/eg1.pdf
@@ -1350,53 +1375,53 @@ pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductor
 
 pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/strain/eps_par2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<Figures/strain/Ec1.pdf, id=1453, 462.52798pt x 346.89601pt>
+<Figures/strain/Ec1.pdf, id=1501, 462.52798pt x 346.89601pt>
 File: Figures/strain/Ec1.pdf Graphic file (type pdf)
 <use Figures/strain/Ec1.pdf>
-Package pdftex.def Info: Figures/strain/Ec1.pdf  used on input line 613.
+Package pdftex.def Info: Figures/strain/Ec1.pdf  used on input line 614.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
-<Figures/strain/Ev_hh1.pdf, id=1454, 462.52798pt x 346.89601pt>
+<Figures/strain/Ev_hh1.pdf, id=1502, 462.52798pt x 346.89601pt>
 File: Figures/strain/Ev_hh1.pdf Graphic file (type pdf)
 <use Figures/strain/Ev_hh1.pdf>
-Package pdftex.def Info: Figures/strain/Ev_hh1.pdf  used on input line 616.
+Package pdftex.def Info: Figures/strain/Ev_hh1.pdf  used on input line 617.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
 
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 612--618
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 613--619
 [][] [] 
  []
 
-<Figures/strain/Ev_lh1.pdf, id=1455, 462.52798pt x 346.89601pt>
+<Figures/strain/Ev_lh1.pdf, id=1503, 462.52798pt x 346.89601pt>
 File: Figures/strain/Ev_lh1.pdf Graphic file (type pdf)
 <use Figures/strain/Ev_lh1.pdf>
-Package pdftex.def Info: Figures/strain/Ev_lh1.pdf  used on input line 620.
+Package pdftex.def Info: Figures/strain/Ev_lh1.pdf  used on input line 621.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
-<Figures/strain/Ev_sh1.pdf, id=1456, 462.52798pt x 346.89601pt>
+<Figures/strain/Ev_sh1.pdf, id=1504, 462.52798pt x 346.89601pt>
 File: Figures/strain/Ev_sh1.pdf Graphic file (type pdf)
 <use Figures/strain/Ev_sh1.pdf>
-Package pdftex.def Info: Figures/strain/Ev_sh1.pdf  used on input line 623.
+Package pdftex.def Info: Figures/strain/Ev_sh1.pdf  used on input line 624.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
 
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 619--625
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 620--626
 [][] [] 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 626.
+(caption)                particular \caption on input line 627.
 See the caption package documentation for explanation.
 
-<Figures/strain/Ec2.pdf, id=1457, 462.52798pt x 346.89601pt>
+<Figures/strain/Ec2.pdf, id=1505, 462.52798pt x 346.89601pt>
 File: Figures/strain/Ec2.pdf Graphic file (type pdf)
 <use Figures/strain/Ec2.pdf>
-Package pdftex.def Info: Figures/strain/Ec2.pdf  used on input line 630.
+Package pdftex.def Info: Figures/strain/Ec2.pdf  used on input line 631.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
-<Figures/strain/Ev_hh2.pdf, id=1458, 462.52798pt x 346.89601pt>
+<Figures/strain/Ev_hh2.pdf, id=1506, 462.52798pt x 346.89601pt>
 File: Figures/strain/Ev_hh2.pdf Graphic file (type pdf)
 <use Figures/strain/Ev_hh2.pdf>
-Package pdftex.def Info: Figures/strain/Ev_hh2.pdf  used on input line 633.
+Package pdftex.def Info: Figures/strain/Ev_hh2.pdf  used on input line 634.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
 
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 629--635
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 630--636
 [][] [] 
  []
 
@@ -1410,33 +1435,33 @@ pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductor
 
 pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/strain/Ev_sh1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<Figures/strain/Ev_lh2.pdf, id=1623, 462.52798pt x 346.89601pt>
+<Figures/strain/Ev_lh2.pdf, id=1671, 462.52798pt x 346.89601pt>
 File: Figures/strain/Ev_lh2.pdf Graphic file (type pdf)
 <use Figures/strain/Ev_lh2.pdf>
-Package pdftex.def Info: Figures/strain/Ev_lh2.pdf  used on input line 637.
+Package pdftex.def Info: Figures/strain/Ev_lh2.pdf  used on input line 638.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
-<Figures/strain/Ev_sh2.pdf, id=1624, 462.52798pt x 346.89601pt>
+<Figures/strain/Ev_sh2.pdf, id=1672, 462.52798pt x 346.89601pt>
 File: Figures/strain/Ev_sh2.pdf Graphic file (type pdf)
 <use Figures/strain/Ev_sh2.pdf>
-Package pdftex.def Info: Figures/strain/Ev_sh2.pdf  used on input line 640.
+Package pdftex.def Info: Figures/strain/Ev_sh2.pdf  used on input line 641.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
 
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 636--642
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 637--643
 [][] [] 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 643.
+(caption)                particular \caption on input line 644.
 See the caption package documentation for explanation.
 
-<Figures/strain/one.pdf, id=1627, 462.52798pt x 346.89601pt>
+<Figures/strain/one.pdf, id=1675, 462.52798pt x 346.89601pt>
 File: Figures/strain/one.pdf Graphic file (type pdf)
 <use Figures/strain/one.pdf>
-Package pdftex.def Info: Figures/strain/one.pdf  used on input line 649.
+Package pdftex.def Info: Figures/strain/one.pdf  used on input line 650.
 (pdftex.def)             Requested size: 343.1309pt x 257.36067pt.
 
-Underfull \hbox (badness 2165) in paragraph at lines 653--653
+Underfull \hbox (badness 2165) in paragraph at lines 654--654
 []\T1/ptm/m/n/12 Rysunek 2.10: |Ry-snek przed-sta-wia-j¡-cy ener-gie wszyst-kich pasm ra-zem, dla ma-te-ria-ªu
  []
 
@@ -1453,109 +1478,394 @@ pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductor
 
 pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/strain/one.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<Figures/structure/strain_no_strain.pdf, id=1837, 462.52798pt x 346.89601pt>
+<Figures/structure/strain_no_strain.pdf, id=1886, 462.52798pt x 346.89601pt>
 File: Figures/structure/strain_no_strain.pdf Graphic file (type pdf)
 <use Figures/structure/strain_no_strain.pdf>
-Package pdftex.def Info: Figures/structure/strain_no_strain.pdf  used on input line 667.
+Package pdftex.def Info: Figures/structure/strain_no_strain.pdf  used on input line 668.
 (pdftex.def)             Requested size: 457.50787pt x 343.14757pt.
-<Figures/structure/temp_strain.pdf, id=1843, 462.52798pt x 346.89601pt>
+<Figures/structure/temp_strain.pdf, id=1892, 462.52798pt x 346.89601pt>
 File: Figures/structure/temp_strain.pdf Graphic file (type pdf)
 <use Figures/structure/temp_strain.pdf>
-Package pdftex.def Info: Figures/structure/temp_strain.pdf  used on input line 693.
+Package pdftex.def Info: Figures/structure/temp_strain.pdf  used on input line 694.
 (pdftex.def)             Requested size: 457.50787pt x 343.14757pt.
  [13 <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/structure/strain_no_strain.pdf>] [14 <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/structure/temp_strain.pdf>]
-<Figures/thickness/fhc.pdf, id=1971, 462.52798pt x 346.89601pt>
+<Figures/thickness/fhc.pdf, id=2019, 462.52798pt x 346.89601pt>
 File: Figures/thickness/fhc.pdf Graphic file (type pdf)
 <use Figures/thickness/fhc.pdf>
-Package pdftex.def Info: Figures/thickness/fhc.pdf  used on input line 740.
+Package pdftex.def Info: Figures/thickness/fhc.pdf  used on input line 741.
 (pdftex.def)             Requested size: 366.00769pt x 274.52122pt.
-<Figures/thickness/fix_x.pdf, id=1974, 462.52798pt x 346.89601pt>
+<Figures/thickness/fix_x.pdf, id=2022, 462.52798pt x 346.89601pt>
 File: Figures/thickness/fix_x.pdf Graphic file (type pdf)
 <use Figures/thickness/fix_x.pdf>
-Package pdftex.def Info: Figures/thickness/fix_x.pdf  used on input line 753.
+Package pdftex.def Info: Figures/thickness/fix_x.pdf  used on input line 754.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
-<Figures/thickness/fix_y.pdf, id=1975, 462.52798pt x 346.89601pt>
+<Figures/thickness/fix_y.pdf, id=2023, 462.52798pt x 346.89601pt>
 File: Figures/thickness/fix_y.pdf Graphic file (type pdf)
 <use Figures/thickness/fix_y.pdf>
-Package pdftex.def Info: Figures/thickness/fix_y.pdf  used on input line 756.
+Package pdftex.def Info: Figures/thickness/fix_y.pdf  used on input line 757.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
 
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 752--758
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 753--759
 [][] [] 
  []
 
 [15 <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/thickness/fhc.pdf>]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 761.
+(caption)                particular \caption on input line 762.
 See the caption package documentation for explanation.
-
-Rozdzia\PlPrIeC {\l } 3.
-
-Overfull \hbox (15.13245pt too wide) in paragraph at lines 775--775
-|\T1/ptm/b/n/20.74 Dodatek: Wy-kre-sy pa-ra-me-trów ma-te-ria-ªów trój-skªad-
- []
-
-<Figures/ternary/eg.pdf, id=2023, 462.52798pt x 346.89601pt>
-File: Figures/ternary/eg.pdf Graphic file (type pdf)
-<use Figures/ternary/eg.pdf>
-Package pdftex.def Info: Figures/ternary/eg.pdf  used on input line 781.
-(pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
-<Figures/ternary/vbo.pdf, id=2024, 462.52798pt x 346.89601pt>
-File: Figures/ternary/vbo.pdf Graphic file (type pdf)
-<use Figures/ternary/vbo.pdf>
-Package pdftex.def Info: Figures/ternary/vbo.pdf  used on input line 784.
-(pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
-
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 780--786
-[][] [] 
- []
 
 [16 <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/thickness/fix_x.pdf> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/thickness/fix_y.pdf
 
 pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/thickness/fix_y.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<Figures/ternary/delta_so.pdf, id=2138, 462.52798pt x 346.89601pt>
+<Figures/band_str/AlAs.pdf, id=2197, 462.52798pt x 346.89601pt>
+File: Figures/band_str/AlAs.pdf Graphic file (type pdf)
+<use Figures/band_str/AlAs.pdf>
+Package pdftex.def Info: Figures/band_str/AlAs.pdf  used on input line 844.
+(pdftex.def)             Requested size: 240.19232pt x 180.14346pt.
+
+Overfull \hbox (11.43839pt too wide) in paragraph at lines 844--845
+[][][][] 
+ []
+
+<Figures/band_str/GaAs.pdf, id=2198, 462.52798pt x 346.89601pt>
+File: Figures/band_str/GaAs.pdf Graphic file (type pdf)
+<use Figures/band_str/GaAs.pdf>
+Package pdftex.def Info: Figures/band_str/GaAs.pdf  used on input line 847.
+(pdftex.def)             Requested size: 240.19232pt x 180.14346pt.
+
+Overfull \hbox (11.43839pt too wide) in paragraph at lines 847--848
+[][][][] 
+ []
+
+<Figures/band_str/AlSb.pdf, id=2199, 462.52798pt x 346.89601pt>
+File: Figures/band_str/AlSb.pdf Graphic file (type pdf)
+<use Figures/band_str/AlSb.pdf>
+Package pdftex.def Info: Figures/band_str/AlSb.pdf  used on input line 850.
+(pdftex.def)             Requested size: 240.19232pt x 180.14346pt.
+
+Overfull \hbox (11.43839pt too wide) in paragraph at lines 850--851
+[][][][] 
+ []
+
+<Figures/band_str/GaSb.pdf, id=2200, 462.52798pt x 346.89601pt>
+File: Figures/band_str/GaSb.pdf Graphic file (type pdf)
+<use Figures/band_str/GaSb.pdf>
+Package pdftex.def Info: Figures/band_str/GaSb.pdf  used on input line 853.
+(pdftex.def)             Requested size: 240.19232pt x 180.14346pt.
+
+Overfull \hbox (11.43839pt too wide) in paragraph at lines 853--854
+[][][][] 
+ []
+
+
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 843--855
+[][] []
+ []
+
+
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 843--855
+[] [] 
+ []
+
+[17 <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/AlAs.pdf> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/GaAs.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/GaAs.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 857.
+See the caption package documentation for explanation.
+
+<Figures/band_str/good/ns_x_0.1_y_0.1.pdf, id=2307, 462.52798pt x 346.89601pt>
+File: Figures/band_str/good/ns_x_0.1_y_0.1.pdf Graphic file (type pdf)
+<use Figures/band_str/good/ns_x_0.1_y_0.1.pdf>
+Package pdftex.def Info: Figures/band_str/good/ns_x_0.1_y_0.1.pdf  used on input line 864.
+(pdftex.def)             Requested size: 240.19232pt x 180.14346pt.
+
+Overfull \hbox (11.43839pt too wide) in paragraph at lines 864--865
+[][][][] 
+ []
+
+<Figures/band_str/good/ns_x_0.1_y_0.7.pdf, id=2308, 462.52798pt x 346.89601pt>
+File: Figures/band_str/good/ns_x_0.1_y_0.7.pdf Graphic file (type pdf)
+<use Figures/band_str/good/ns_x_0.1_y_0.7.pdf>
+Package pdftex.def Info: Figures/band_str/good/ns_x_0.1_y_0.7.pdf  used on input line 867.
+(pdftex.def)             Requested size: 240.19232pt x 180.14346pt.
+
+Overfull \hbox (11.43839pt too wide) in paragraph at lines 867--868
+[][][][] 
+ []
+
+<Figures/band_str/good/ns_x_0.5_y_0.1.pdf, id=2309, 462.52798pt x 346.89601pt>
+File: Figures/band_str/good/ns_x_0.5_y_0.1.pdf Graphic file (type pdf)
+<use Figures/band_str/good/ns_x_0.5_y_0.1.pdf>
+Package pdftex.def Info: Figures/band_str/good/ns_x_0.5_y_0.1.pdf  used on input line 870.
+(pdftex.def)             Requested size: 240.19232pt x 180.14346pt.
+
+Overfull \hbox (11.43839pt too wide) in paragraph at lines 870--871
+[][][][] 
+ []
+
+<Figures/band_str/good/ns_x_0.9_y_0.5.pdf, id=2310, 462.52798pt x 346.89601pt>
+File: Figures/band_str/good/ns_x_0.9_y_0.5.pdf Graphic file (type pdf)
+<use Figures/band_str/good/ns_x_0.9_y_0.5.pdf>
+Package pdftex.def Info: Figures/band_str/good/ns_x_0.9_y_0.5.pdf  used on input line 873.
+(pdftex.def)             Requested size: 240.19232pt x 180.14346pt.
+
+Overfull \hbox (11.43839pt too wide) in paragraph at lines 873--874
+[][][][] 
+ []
+
+
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 863--875
+[][] []
+ []
+
+
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 863--875
+[] [] 
+ []
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 879.
+See the caption package documentation for explanation.
+
+[18 <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/AlSb.pdf> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/GaSb.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/GaSb.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/good/ns_x_0.1_y_0.1.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/good/ns_x_0.1_y_0.1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/good/ns_x_0.1_y_0.7.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/good/ns_x_0.1_y_0.7.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/good/ns_x_0.5_y_0.1.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/good/ns_x_0.5_y_0.1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/good/ns_x_0.9_y_0.5.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/good/ns_x_0.9_y_0.5.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Figures/band_str/good/x_0.1_y_0.3.pdf, id=2636, 462.52798pt x 346.89601pt>
+File: Figures/band_str/good/x_0.1_y_0.3.pdf Graphic file (type pdf)
+<use Figures/band_str/good/x_0.1_y_0.3.pdf>
+Package pdftex.def Info: Figures/band_str/good/x_0.1_y_0.3.pdf  used on input line 886.
+(pdftex.def)             Requested size: 240.19232pt x 180.14346pt.
+
+Overfull \hbox (11.43839pt too wide) in paragraph at lines 886--887
+[][][][] 
+ []
+
+<Figures/band_str/good/x_0.1_y_0.9.pdf, id=2637, 462.52798pt x 346.89601pt>
+File: Figures/band_str/good/x_0.1_y_0.9.pdf Graphic file (type pdf)
+<use Figures/band_str/good/x_0.1_y_0.9.pdf>
+Package pdftex.def Info: Figures/band_str/good/x_0.1_y_0.9.pdf  used on input line 889.
+(pdftex.def)             Requested size: 240.19232pt x 180.14346pt.
+
+Overfull \hbox (11.43839pt too wide) in paragraph at lines 889--890
+[][][][] 
+ []
+
+<Figures/band_str/good/x_0.5_y_0.9.pdf, id=2638, 462.52798pt x 346.89601pt>
+File: Figures/band_str/good/x_0.5_y_0.9.pdf Graphic file (type pdf)
+<use Figures/band_str/good/x_0.5_y_0.9.pdf>
+Package pdftex.def Info: Figures/band_str/good/x_0.5_y_0.9.pdf  used on input line 892.
+(pdftex.def)             Requested size: 240.19232pt x 180.14346pt.
+
+Overfull \hbox (11.43839pt too wide) in paragraph at lines 892--893
+[][][][] 
+ []
+
+<Figures/band_str/good/x_0.9_y_0.5.pdf, id=2639, 462.52798pt x 346.89601pt>
+File: Figures/band_str/good/x_0.9_y_0.5.pdf Graphic file (type pdf)
+<use Figures/band_str/good/x_0.9_y_0.5.pdf>
+Package pdftex.def Info: Figures/band_str/good/x_0.9_y_0.5.pdf  used on input line 895.
+(pdftex.def)             Requested size: 240.19232pt x 180.14346pt.
+
+Overfull \hbox (11.43839pt too wide) in paragraph at lines 895--896
+[][][][] 
+ []
+
+
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 885--897
+[][] []
+ []
+
+
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 885--897
+[] [] 
+ []
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 902.
+See the caption package documentation for explanation.
+
+[19 <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/good/x_0.1_y_0.3.pdf> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/good/x_0.1_y_0.9.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/good/x_0.1_y_0.9.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/good/x_0.5_y_0.9.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/good/x_0.5_y_0.9.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/good/x_0.9_y_0.5.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/band_str/good/x_0.9_y_0.5.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Figures/carriers/integrand.pdf, id=2834, 462.52798pt x 346.89601pt>
+File: Figures/carriers/integrand.pdf Graphic file (type pdf)
+<use Figures/carriers/integrand.pdf>
+Package pdftex.def Info: Figures/carriers/integrand.pdf  used on input line 948.
+(pdftex.def)             Requested size: 320.2541pt x 240.20012pt.
+ [20 <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/integrand.pdf>]
+<Figures/carriers/concentration_L_100.pdf, id=2884, 462.52798pt x 346.89601pt>
+File: Figures/carriers/concentration_L_100.pdf Graphic file (type pdf)
+<use Figures/carriers/concentration_L_100.pdf>
+Package pdftex.def Info: Figures/carriers/concentration_L_100.pdf  used on input line 994.
+(pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
+<Figures/carriers/concentration_L_200.pdf, id=2885, 462.52798pt x 346.89601pt>
+File: Figures/carriers/concentration_L_200.pdf Graphic file (type pdf)
+<use Figures/carriers/concentration_L_200.pdf>
+Package pdftex.def Info: Figures/carriers/concentration_L_200.pdf  used on input line 998.
+(pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
+<Figures/carriers/concentration_L_400.pdf, id=2886, 462.52798pt x 346.89601pt>
+File: Figures/carriers/concentration_L_400.pdf Graphic file (type pdf)
+<use Figures/carriers/concentration_L_400.pdf>
+Package pdftex.def Info: Figures/carriers/concentration_L_400.pdf  used on input line 1001.
+(pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
+<Figures/carriers/concentration_L_500.pdf, id=2887, 462.52798pt x 346.89601pt>
+File: Figures/carriers/concentration_L_500.pdf Graphic file (type pdf)
+<use Figures/carriers/concentration_L_500.pdf>
+Package pdftex.def Info: Figures/carriers/concentration_L_500.pdf  used on input line 1004.
+(pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
+
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 992--1006
+[][] []
+ []
+
+
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 992--1006
+[] [] 
+ []
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1011.
+See the caption package documentation for explanation.
+
+[21 <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/concentration_L_100.pdf> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/concentration_L_200.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/concentration_L_200.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/concentration_L_400.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/concentration_L_400.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/concentration_L_500.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/concentration_L_500.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Figures/carriers/fermi_L_100.pdf, id=3092, 462.52798pt x 346.89601pt>
+File: Figures/carriers/fermi_L_100.pdf Graphic file (type pdf)
+<use Figures/carriers/fermi_L_100.pdf>
+Package pdftex.def Info: Figures/carriers/fermi_L_100.pdf  used on input line 1036.
+(pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
+<Figures/carriers/fermi_L_200.pdf, id=3093, 462.52798pt x 346.89601pt>
+File: Figures/carriers/fermi_L_200.pdf Graphic file (type pdf)
+<use Figures/carriers/fermi_L_200.pdf>
+Package pdftex.def Info: Figures/carriers/fermi_L_200.pdf  used on input line 1040.
+(pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
+<Figures/carriers/fermi_L_400.pdf, id=3094, 462.52798pt x 346.89601pt>
+File: Figures/carriers/fermi_L_400.pdf Graphic file (type pdf)
+<use Figures/carriers/fermi_L_400.pdf>
+Package pdftex.def Info: Figures/carriers/fermi_L_400.pdf  used on input line 1043.
+(pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
+<Figures/carriers/fermi_L_500.pdf, id=3095, 462.52798pt x 346.89601pt>
+File: Figures/carriers/fermi_L_500.pdf Graphic file (type pdf)
+<use Figures/carriers/fermi_L_500.pdf>
+Package pdftex.def Info: Figures/carriers/fermi_L_500.pdf  used on input line 1046.
+(pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
+
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 1034--1048
+[][] []
+ []
+
+
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 1034--1048
+[] [] 
+ []
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1051.
+See the caption package documentation for explanation.
+
+[22 <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/fermi_L_100.pdf> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/fermi_L_200.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/fermi_L_200.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/fermi_L_400.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/fermi_L_400.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/fermi_L_500.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/fermi_L_500.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Figures/ternary/eg.pdf, id=3327, 462.52798pt x 346.89601pt>
+File: Figures/ternary/eg.pdf Graphic file (type pdf)
+<use Figures/ternary/eg.pdf>
+Package pdftex.def Info: Figures/ternary/eg.pdf  used on input line 1071.
+(pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
+<Figures/ternary/vbo.pdf, id=3328, 462.52798pt x 346.89601pt>
+File: Figures/ternary/vbo.pdf Graphic file (type pdf)
+<use Figures/ternary/vbo.pdf>
+Package pdftex.def Info: Figures/ternary/vbo.pdf  used on input line 1074.
+(pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
+
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 1070--1076
+[][] [] 
+ []
+
+<Figures/ternary/delta_so.pdf, id=3329, 462.52798pt x 346.89601pt>
 File: Figures/ternary/delta_so.pdf Graphic file (type pdf)
 <use Figures/ternary/delta_so.pdf>
-Package pdftex.def Info: Figures/ternary/delta_so.pdf  used on input line 788.
+Package pdftex.def Info: Figures/ternary/delta_so.pdf  used on input line 1078.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
-<Figures/ternary/alc.pdf, id=2139, 462.52798pt x 346.89601pt>
+<Figures/ternary/alc.pdf, id=3330, 462.52798pt x 346.89601pt>
 File: Figures/ternary/alc.pdf Graphic file (type pdf)
 <use Figures/ternary/alc.pdf>
-Package pdftex.def Info: Figures/ternary/alc.pdf  used on input line 791.
+Package pdftex.def Info: Figures/ternary/alc.pdf  used on input line 1081.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
 
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 787--793
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 1077--1083
 [][] [] 
  []
 
-<Figures/ternary/m_e.pdf, id=2140, 462.52798pt x 346.89601pt>
+<Figures/ternary/m_e.pdf, id=3331, 462.52798pt x 346.89601pt>
 File: Figures/ternary/m_e.pdf Graphic file (type pdf)
 <use Figures/ternary/m_e.pdf>
-Package pdftex.def Info: Figures/ternary/m_e.pdf  used on input line 795.
+Package pdftex.def Info: Figures/ternary/m_e.pdf  used on input line 1085.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
-<Figures/ternary/m_hh.pdf, id=2141, 462.52798pt x 346.89601pt>
+<Figures/ternary/m_hh.pdf, id=3332, 462.52798pt x 346.89601pt>
 File: Figures/ternary/m_hh.pdf Graphic file (type pdf)
 <use Figures/ternary/m_hh.pdf>
-Package pdftex.def Info: Figures/ternary/m_hh.pdf  used on input line 798.
+Package pdftex.def Info: Figures/ternary/m_hh.pdf  used on input line 1088.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
 
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 794--800
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 1084--1090
 [][] [] 
  []
 
-<Figures/ternary/m_lh.pdf, id=2142, 462.52798pt x 346.89601pt>
+<Figures/ternary/m_lh.pdf, id=3333, 462.52798pt x 346.89601pt>
 File: Figures/ternary/m_lh.pdf Graphic file (type pdf)
 <use Figures/ternary/m_lh.pdf>
-Package pdftex.def Info: Figures/ternary/m_lh.pdf  used on input line 803.
+Package pdftex.def Info: Figures/ternary/m_lh.pdf  used on input line 1093.
 (pdftex.def)             Requested size: 228.75394pt x 171.56848pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 805.
+(caption)                particular \caption on input line 1095.
 See the caption package documentation for explanation.
 
-[17 <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/ternary/eg.pdf> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/ternary/vbo.pdf
+[23 <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/ternary/eg.pdf> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/ternary/vbo.pdf
 
 pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/ternary/vbo.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/ternary/delta_so.pdf
@@ -1570,42 +1880,103 @@ pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductor
 > <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/ternary/m_hh.pdf
 
 pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/ternary/m_hh.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/ternary/m_lh.pdf
-
-pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/ternary/m_lh.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-Overfull \hbox (7.32202pt too wide) in paragraph at lines 820--820
+<Figures/carriers/dos_L_100.pdf, id=3598, 462.52798pt x 346.89601pt>
+File: Figures/carriers/dos_L_100.pdf Graphic file (type pdf)
+<use Figures/carriers/dos_L_100.pdf>
+Package pdftex.def Info: Figures/carriers/dos_L_100.pdf  used on input line 1104.
+(pdftex.def)             Requested size: 192.15247pt x 144.11266pt.
+<Figures/carriers/dos_L_300.pdf, id=3599, 462.52798pt x 346.89601pt>
+File: Figures/carriers/dos_L_300.pdf Graphic file (type pdf)
+<use Figures/carriers/dos_L_300.pdf>
+Package pdftex.def Info: Figures/carriers/dos_L_300.pdf  used on input line 1108.
+(pdftex.def)             Requested size: 192.15247pt x 144.11266pt.
+<Figures/carriers/dos_L_500.pdf, id=3600, 462.52798pt x 346.89601pt>
+File: Figures/carriers/dos_L_500.pdf Graphic file (type pdf)
+<use Figures/carriers/dos_L_500.pdf>
+Package pdftex.def Info: Figures/carriers/dos_L_500.pdf  used on input line 1112.
+(pdftex.def)             Requested size: 192.15247pt x 144.11266pt.
+<Figures/carriers/dos_val_L_100.pdf, id=3601, 462.52798pt x 346.89601pt>
+File: Figures/carriers/dos_val_L_100.pdf Graphic file (type pdf)
+<use Figures/carriers/dos_val_L_100.pdf>
+Package pdftex.def Info: Figures/carriers/dos_val_L_100.pdf  used on input line 1116.
+(pdftex.def)             Requested size: 183.00035pt x 137.25267pt.
+<Figures/carriers/dos_val_L_300.pdf, id=3602, 462.52798pt x 346.89601pt>
+File: Figures/carriers/dos_val_L_300.pdf Graphic file (type pdf)
+<use Figures/carriers/dos_val_L_300.pdf>
+Package pdftex.def Info: Figures/carriers/dos_val_L_300.pdf  used on input line 1120.
+(pdftex.def)             Requested size: 183.00035pt x 137.25267pt.
+<Figures/carriers/dos_val_L_500.pdf, id=3603, 462.52798pt x 346.89601pt>
+File: Figures/carriers/dos_val_L_500.pdf Graphic file (type pdf)
+<use Figures/carriers/dos_val_L_500.pdf>
+Package pdftex.def Info: Figures/carriers/dos_val_L_500.pdf  used on input line 1124.
+(pdftex.def)             Requested size: 183.00035pt x 137.25267pt.
+
+Overfull \hbox (135.50958pt too wide) in paragraph at lines 1102--1126
+[][] [] []
+ []
+
+
+Overfull \hbox (96.05324pt too wide) in paragraph at lines 1102--1126
+[] [] [] 
+ []
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1130.
+See the caption package documentation for explanation.
+
+[24 <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/ternary/m_lh.pdf> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/dos_L_100.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/dos_L_100.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/dos_L_300.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/dos_L_300.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/dos_L_500.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/dos_L_500.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/dos_val_L_100.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/dos_val_L_100.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/dos_val_L_300.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/dos_val_L_300.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/dos_val_L_500.pdf
+
+pdfTeX warning: pdflatex.exe (file d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/Figures/carriers/dos_val_L_500.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Overfull \hbox (7.32202pt too wide) in paragraph at lines 1146--1146
 []\T1/ptm/m/n/12 Michael L. Tim-mons []and []S. M. Be-da-ir. ``Al-Ga-AsSb/GaAsSb CA-SCA-DE SO-LAR CELLS.''
  []
 
-[18]
-Overfull \hbox (14.02232pt too wide) in paragraph at lines 820--820
+[25]
+Overfull \hbox (14.02232pt too wide) in paragraph at lines 1146--1146
 []\T1/ptm/m/n/12 Quankui Yang []et al. []``Room-temperature short-wavelength Ga-InA-sA-lAsSb quantum-cascade
  []
 
-[19]
-Overfull \hbox (28.89886pt too wide) in paragraph at lines 820--820
+[26]
+Overfull \hbox (28.89886pt too wide) in paragraph at lines 1146--1146
 \T1/cmtt/m/n/12 of -[] algaassb -[] algalnp -[] algainas -[] and -[] gainasp -[] for -[] optoelectronic -[] applications /
  []
 
 
-Overfull \hbox (29.875pt too wide) in paragraph at lines 820--820
+Overfull \hbox (29.875pt too wide) in paragraph at lines 1146--1146
 \T1/ptm/m/it/12 duc-tors\T1/ptm/m/n/12 . Chi-che-ster, UK: John Wi-ley & Sons, Ltd, []Mar. []2009, []pp. []1^^U400. \T1/ptm/m/sc/12 isbn\T1/ptm/m/n/12 : 9780470744383.
  []
 
 
-Overfull \hbox (22.50258pt too wide) in paragraph at lines 820--820
+Overfull \hbox (22.50258pt too wide) in paragraph at lines 1146--1146
 \T1/ptm/m/sc/12 doi\T1/ptm/m/n/12 : [][]$\T1/cmtt/m/n/12 10 . 1002 / 9780470744383$[][]\T1/ptm/m/n/12 . \T1/ptm/m/sc/12 url\T1/ptm/m/n/12 : [][]$\T1/cmtt/m/n/12 http : / / doi . wiley . com / 10 . 1002 / 9780470744383$[][]\T1/ptm/m/n/12 . 
  []
 
-[20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 826.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 826.
+[27]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1152.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1152.
  (d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 826.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 826.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1152.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1152.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D228D91D10568CF1012F4E108D2BDB15;1246.
+(rerunfilecheck)             Checksum: 70770A559143B40962D29F920D58D2CD;1491.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1613,21 +1984,21 @@ LaTeX Warning: There were multiply-defined labels.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 826.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1152.
  ) 
 Here is how much of TeX's memory you used:
- 31477 strings out of 480875
- 623272 string characters out of 5911456
- 1262819 words of memory out of 5000000
- 46453 multiletter control sequences out of 15000+600000
+ 31733 strings out of 480875
+ 630874 string characters out of 5911456
+ 1268880 words of memory out of 5000000
+ 46646 multiletter control sequences out of 15000+600000
  587841 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,14n,77p,3958b,2245s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/main.pdf (23 pages, 835897 bytes).
+{c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on d:/Desktop/InProgress/SemestrVI/Semiconductors/code/report/main.pdf (31 pages, 1322904 bytes).
 PDF statistics:
- 2607 PDF objects out of 2984 (max. 8388607)
- 828 compressed objects within 9 object streams
- 98 named destinations out of 1000 (max. 500000)
- 383 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4080 PDF objects out of 4296 (max. 8388607)
+ 1219 compressed objects within 13 object streams
+ 131 named destinations out of 1000 (max. 500000)
+ 534 words of extra memory for PDF output out of 10000 (max. 10000000)
 

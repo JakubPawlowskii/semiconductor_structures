@@ -24,11 +24,11 @@ Eso_DOS = dict()
 E = dict()
 Eg_T = dict()
 
-materials = ["AlSb"]
+materials = ["GaAs"]
 # ylims = ((-1.8, -1.0), (1.5, 2.1)) #AlAs
 # ylims = ((-1.4, 0.0), (0.6, 1.8)) #GaSb
-# ylims = ((-1.45, -0.5), (0.4, 1.4)) #GaAs
-ylims = ((-1.4, -0.3), (1.8, 2.4)) #AlSb
+ylims = ((-1.45, -0.5), (0.4, 1.4)) #GaAs
+# ylims = ((-1.4, -0.3), (1.8, 2.4)) #AlSb
 
 VBO = {
     "GaAs": par.GaAs["VBO"],
@@ -99,7 +99,7 @@ delta_so = {
     "GaSb": par.GaSb["delta_so"],
 }
 const = 0.0380998212
-constDOS = 1 / np.pi ** 2 * (1 / const) ** (3 / 2)
+constDOS = 1 /(2 * np.pi ** 2) * (1 / const) ** (3 / 2)
 for material in materials:
     Ec[material] = np.zeros([len(temperature), len(kz_values)], dtype=float)
     Ehh[material] = np.zeros([len(temperature), len(kz_values)], dtype=float)
@@ -128,10 +128,18 @@ for material in materials:
         for j, E_val in enumerate(E[material][i, :]):
             Ec_DOS[material][i, j] = constDOS * m_e[material] ** (3 / 2) * (
                         E_val - VBO[material] - Eg_T[material][i]) ** (1 / 2)
+            if np.isnan(Ec_DOS[material][i,j]):
+                Ec_DOS[material][i, j] = 1e-20
             Ehh_DOS[material][i, j] = constDOS * m_hh[material] ** (3 / 2) * (-(E_val - VBO[material])) ** (1 / 2)
+            if np.isnan(Ehh_DOS[material][i,j]):
+                Ehh_DOS[material][i, j] = 1e-20
             Elh_DOS[material][i, j] = constDOS * m_lh[material] ** (3 / 2) * (-(E_val - VBO[material])) ** (1 / 2)
+            if np.isnan(Elh_DOS[material][i,j]):
+                Elh_DOS[material][i, j] = 1e-20
             Eso_DOS[material][i, j] = constDOS * m_so[material] ** (3 / 2) * (
                 -(E_val - VBO[material] + delta_so[material])) ** (1 / 2)
+            if np.isnan(Eso_DOS[material][i,j]):
+                Eso_DOS[material][i, j] = 1e-20
 
 # fig = plt.figure(figsize=(8, 8))
 # gs = fig.add_gridspec(1, 2, width_ratios=(7, 4),
@@ -149,6 +157,7 @@ sps = GridSpec(nrows=1, ncols=2, width_ratios=(7, 4),
 ax = brokenaxes(ylims=ylims, hspace=.1, subplot_spec=sps[0], d=0.01)
 ax_DOS = brokenaxes(ylims=ylims, hspace=.1, subplot_spec=sps[1], d=0.01)
 ax_DOS.tick_params(axis="y", labelleft=False)
+ax_DOS.set_xlim([0,0.2])
 filename = ''
 path = 'report/Figures/band_str/'
 linestyles = ['solid', 'dashed', 'dotted', 'dashdot']
@@ -210,9 +219,9 @@ for material in materials:
     fig.text(0.0,0.37,r'Energia [eV]', fontsize=fontsize, rotation='vertical' )
     fig.text(0.32, 0.06, r'$k_z\;[1/nm]$', va='center',fontsize=fontsize)
     fig.text(0.7, 0.06, r'$DOS\;[stany/eV]$', va='center',fontsize=fontsize)
-    plt.savefig(path+filename)
-    ax.fig.gca().clear()
-    ax_DOS.fig.gca().clear()
-    plt.gca().set_prop_cycle(None)
-
+    # plt.savefig(path+filename)
+    # ax.fig.gca().clear()
+    # ax_DOS.fig.gca().clear()
+    # plt.gca().set_prop_cycle(None)
+    plt.show()
 print('Program finished in ', time.time() - start, ' s.')

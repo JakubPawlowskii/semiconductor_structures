@@ -12,15 +12,15 @@ def fun(hc, b, ni, f):
 
 start = time.time()
 
-legend_fontsize = 12
-fontsize = 13
-tick_fontsize = 14
-ext = '.pdf'
+legend_fontsize = 13
+fontsize = 17
+tick_fontsize = 17
+ext = '.png'
 folder = 'report/Figures/thickness/'
 ternary_mat = ["AlGaAs", "AlGaSb", "AlAsSb", "GaAsSb"]
 temperature = np.array([300])
 parameter_keys = ["alc_temp", "c11", "c12"]
-var = np.linspace(0.0, 1.0, 1000)
+var = np.linspace(0.0, 0.95, 1000)
 fixed = np.array([0.1, 0.3, 0.5, 0.8])
 
 ternary_params = dict()
@@ -86,15 +86,19 @@ for k, T in enumerate(temperature):
     ternary_params_with_temperature.append(copy.deepcopy(ternary_params))
     quaternary_params_with_temperature.append(copy.deepcopy(quaternary_params))
 crit_thick = []
+crit_thick_fit = []
 burg = []
 poiss = []
 deff = []
 for i in range(len(temperature)):
     crit_thick.append(dict())
+    crit_thick_fit.append(dict())
     for fix_type in ["fix_x", "fix_y"]:
         crit_thick[i][fix_type] = []
+        crit_thick_fit[i][fix_type] = []
         for j, fix in enumerate(fixed):
             crit_thick[i][fix_type].append([])
+            crit_thick_fit[i][fix_type].append([])
             for k, v in enumerate(var):
                 a = quaternary_params_with_temperature[i][fix_type]['{0:1.1f}'.format(fix)]["alc_temp"][k]
                 a_sub = par.GaAs["alc_temp"](temperature[i])
@@ -107,9 +111,9 @@ for i in range(len(temperature)):
                 burg.append(burgers)
                 poiss.append(poisson)
                 deff.append(deformation)
-                a = 0.001
+                a = 4
                 val_a = fun(a, burgers, poisson, deformation)
-                b_range = np.linspace(0.001, 400, 2000)
+                b_range = np.linspace(4, 100000, 10000)
                 b = 0
                 for n in b_range:
                     val_b = fun(n, burgers, poisson, deformation)
@@ -123,36 +127,44 @@ for i in range(len(temperature)):
                     fun, a, b,
                     args=(burgers, poisson, deformation)
                 )
-                crit_thick[i][fix_type][j].append(hc)
 
-hh = np.linspace(0.01, 20, 1000)
-ii = [7113, 6585, 4535, 3373, 2758]
-for index in ii:
-    funval = fun(hh, burg[index], poiss[index], deff[index])
-    plt.plot(hh, funval)
-plt.ylim([-75, 45])
-plt.axhline(y=0, color='k', linewidth=0.5)
-plt.xlabel("Grubość krytyczna $(\AA)$", fontsize=fontsize)
-plt.ylabel("f$(h_c)$ $(\AA)$", fontsize=fontsize)
-plt.yticks(fontsize=tick_fontsize)
-plt.xticks(fontsize=tick_fontsize)
-plt.savefig(folder+'fhc'+ext)
-plt.gca().clear()
+                hc_fit = (16/deformation)**2.4 * 10**(-5)
+                crit_thick[i][fix_type][j].append(hc)
+                crit_thick_fit[i][fix_type][j].append(hc_fit)
+
+# hh = np.linspace(5, 600, 1000)
+# ii = [7113, 6585, 4535, 3373, 2758]
+# for index in ii:
+#     funval = fun(hh, burg[index], poiss[index], deff[index])
+#     plt.plot(hh, funval)
+# # plt.ylim([-75, 45])
+# plt.axhline(y=0, color='k', linewidth=0.5)
+# plt.xlabel("Grubość krytyczna $(\AA)$", fontsize=fontsize)
+# plt.ylabel("f$(h_c)$ $(\AA)$", fontsize=fontsize)
+# plt.yticks(fontsize=tick_fontsize)
+# plt.xticks(fontsize=tick_fontsize)
+# plt.tight_layout()
+# plt.savefig(folder+'fhc'+ext)
+# plt.gca().clear()
+
 for i in range(len(temperature)):
     for fix_type in ['fix_x', 'fix_y']:
         for j in range(len(fixed)):
             hc = crit_thick[i][fix_type][j]
+            # hc_fit = crit_thick_fit[i][fix_type][j]
             if fix_type == 'fix_x':
-                label = r'$Al_{y}Ga_{1-y}As_{' + '%.1f' % fixed[j] + r'}Sb_{' + '%.1f' % (1 - fixed[j]) + '}$'
+                label = r'$Al_{1-y}Ga_{y}As_{' + '%.1f' %(1-fixed[j]) + r'}Sb_{' + '%.1f' % (fixed[j]) + '}$'
             else:
-                label = r'$Al_{' + '%.1f' % fixed[j] + r'}Ga_{' + '%.1f' % (1 - fixed[j]) + '}As_{x}Sb_{1-x}$'
+                label = r'$Al_{' + '%.1f' % (1-fixed[j]) + r'}Ga_{' + '%.1f' % (fixed[j]) + '}As_{x}Sb_{1-x}$'
             plt.plot(var, hc, label=label)
+            # plt.plot(var, hc_fit,'--')
+
         if fix_type == 'fix_x':
             xlabel = 'Ułamek molowy y'
-            plt.text(0.1, 2.3, "(a)", fontsize=fontsize)
+            plt.text(0.0, 400, "(a)", fontsize=fontsize)
         else:
             xlabel = 'Ułamek molowy x'
-            plt.text(0.0, 2.18, "(b)", fontsize=fontsize)
+            plt.text(0.0, 120, "(b)", fontsize=fontsize)
 
         plt.legend(loc='best', fontsize=legend_fontsize)
         # plt.legend(bbox_to_anchor=(0, 1, 1, 0), loc="lower left", ncol=2, fontsize=fontsize-4)
@@ -161,10 +173,10 @@ for i in range(len(temperature)):
         plt.yticks(fontsize=tick_fontsize)
         plt.xticks(fontsize=tick_fontsize)
         plt.tight_layout()
-        # if fix_type == 'fix_x':
-        #     plt.savefig(folder + 'fix_x' + ext)
-        # else:
-        #     plt.savefig(folder + 'fix_y' + ext)
+        if fix_type == 'fix_x':
+            plt.savefig(folder + 'fix_x' + ext)
+        else:
+            plt.savefig(folder + 'fix_y' + ext)
         plt.gca().clear()
 
 
